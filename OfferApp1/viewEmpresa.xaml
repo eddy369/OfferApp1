@@ -4,9 +4,51 @@
              x:Class="OfferApp1.viewEmpresa">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Frame BackgroundColor="#330099" Padding="0" CornerRadius="0">
+                <Label Text="Registre su Empresa" HorizontalTextAlignment="Center" TextColor="White" FontSize="18"/>
+            </Frame>
+
+            <Grid>
+                <Image Source="wallpaper.jpg" Aspect="AspectFill" Opacity="0.6"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Entry x:Name="txtUsuario" PlaceholderColor="Black" IsReadOnly="True" TextColor="Red" Grid.Row="0" Grid.Column="0" FontSize="22"/>
+                    <Label Text="CONECTADO" HorizontalTextAlignment="Center" TextColor="Red" Grid.Row="0" Grid.Column="1" FontSize="22"/>
+
+                    <Label Text="Nombre" TextColor="Black" Grid.Row="2" Grid.Column="0" FontSize="22"/>
+                    <Entry x:Name="txtNombre" Keyboard="Text" Grid.Row="2" Grid.Column="1" FontSize="22"/>
+                    <Label Text="Telefono" TextColor="Black" Grid.Row="3" Grid.Column="0" FontSize="22"/>
+                    <Entry x:Name="txtTelefono" Keyboard="Numeric" Grid.Row="3" Grid.Column="1" FontSize="22"/>
+                    <Label Text="Direccion" TextColor="Black" Grid.Row="4" Grid.Column="0" FontSize="22"/>
+                    <Entry x:Name="txtDireccion" PlaceholderColor="Black" IsReadOnly="True" TextColor="Red" Grid.Row="4" Grid.Column="1" FontSize="22"/>
+                    <Label Text="Ciudad" TextColor="Black" Grid.Row="5" Grid.Column="0" FontSize="22"/>
+                    <Entry x:Name="txtCiudad" PlaceholderColor="Black" IsReadOnly="True" TextColor="Red" Grid.Row="5" Grid.Column="1" FontSize="22"/>
+                    <Label Text="Nombre Comercial" TextColor="Black" Grid.Row="6" Grid.Column="0" FontSize="22"/>
+                    <Entry x:Name="txtNombreComercial" PlaceholderColor="Black" IsReadOnly="True" TextColor="Red" Grid.Row="6" Grid.Column="1" FontSize="22"/>
+                    <Label Text="Correo" TextColor="Black" Grid.Row="7" Grid.Column="0" FontSize="22"/>
+                    <Entry x:Name="txtCorreo" PlaceholderColor="Black" IsReadOnly="True" TextColor="Red" Grid.Row="7" Grid.Column="1" FontSize="22"/>
+                    <Button x:Name="btnGuardar" Text="GUARDAR" TextColor="White" BackgroundColor="Green" BorderColor="Yellow" BorderWidth="3" Grid.Row="9" Grid.Column="0" FontSize="22"/>
+                    <Button x:Name="btnIniciar" Text="INICIAR" TextColor="White" BackgroundColor="Green" BorderColor="Yellow" BorderWidth="3" Grid.Row="9" Grid.Column="1" FontSize="22"/>
+
+                </Grid>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
