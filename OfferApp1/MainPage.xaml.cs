@@ -18,13 +18,13 @@ namespace OfferApp1
         private async void btnAbrir_Clicked(object sender, EventArgs e)
         {
             //almacenar los datos en variables
-            string usuario = txtUsuario.Text;
-            string password = txtContrasena.Text;
+            string usuario = txtCorreo.Text;
+            string password = txtPassword.Text;
 
             try
             {
 
-                if (txtUsuario.Text == "es" && txtContrasena.Text == "1234")
+                if (txtCorreo.Text == "es" && txtPassword.Text == "1234")
                 {
                     //accion navegar a ventana dos
                     await Navigation.PushAsync(new viewEmpresa());
@@ -32,11 +32,11 @@ namespace OfferApp1
                     DisplayAlert("BIENVENIDO", usuario, "OK");
                 }
 
-                else if (txtUsuario.Text != "es")
+                else if (txtCorreo.Text != "es")
                 {
                     await Navigation.PushAsync(null);
                 }
-                else if (txtContrasena.Text != "1234")
+                else if (txtPassword.Text != "1234")
                 {
                     await Navigation.PushAsync(null);
                 }

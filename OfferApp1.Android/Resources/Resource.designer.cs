@@ -11793,6 +11793,9 @@ namespace OfferApp1.Droid
 			// aapt resource value: 0x7F070091
 			public const int wallpaper2 = 2131165329;
 			
+			// aapt resource value: 0x7F070092
+			public const int wallpaperlego = 2131165330;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
