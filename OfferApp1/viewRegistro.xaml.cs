@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,7 +20,21 @@ namespace OfferApp1
 
         private void btnGuardar_Clicked(object sender, EventArgs e)
         {
+            try
+            {
+                WebClient cliente = new WebClient();
+                var parametros = new System.Collections.Specialized.NameValueCollection();
+                parametros.Add("EMAIL", txtCorreo.Text);
+                parametros.Add("PASSWORD", txtPassword.Text);
 
+                cliente.UploadValues("http://192.168.100.245/moviles/post.php", "POST", parametros);
+
+                DisplayAlert("alerta", "ingreso correcto", "ok");
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("alerta", ex.Message, "ok");
+            }
         }
 
         private async void btnSalir_Clicked(object sender, EventArgs e)
