@@ -2,27 +2,23 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="OfferApp1.MainPage" NavigationPage.HasNavigationBar="False">
-
     <StackLayout>
         <Grid>
-            <Image Source="wallpaper.jpg" Aspect="AspectFill" Opacity="0.8"/>
+            <Image Source="wallpaper.jpg" Aspect="AspectFill" Opacity="1"/>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
                 <Image Grid.Row="0" Source="Offer.png" WidthRequest="200" HeightRequest="200" Margin="0,20,0,0"/>
                 <StackLayout Grid.Row="1" Padding="20,20" HorizontalOptions="Center">
                     <Entry x:Name="txtCorreo" Placeholder="Correo" PlaceholderColor="#E64AFF" FontSize="24"/>
                     <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" PlaceholderColor="#E64AFF" FontSize="24"/>
-                    <Button x:Name="btnAbrir" Text="Iniciar Sesion" Clicked="btnAbrir_Clicked" BackgroundColor="#E64AFF" BorderRadius="30" TextColor="#35158B" Grid.Column="0" FontSize="26"/>
-                    <Button x:Name="btnRegistrarse" Text="Registrarse" Clicked="btnRegistrarse_Clicked"  BackgroundColor="#E64AFF" BorderRadius="30" TextColor="#35158B" Grid.Column="1" FontSize="26"/>
+                    <Button x:Name="btnAbrir" Text="Iniciar Sesion" Clicked="btnAbrir_Clicked" BackgroundColor="#E64AFF" BorderRadius="30" TextColor="#35158B" FontSize="26"/>
+                    <Button x:Name="btnRegistrarse" Text="Registrarse" Clicked="btnRegistrarse_Clicked"  BackgroundColor="#E64AFF" BorderRadius="30" TextColor="#35158B" FontSize="26"/>
                 </StackLayout>
             </Grid>
         </Grid>
