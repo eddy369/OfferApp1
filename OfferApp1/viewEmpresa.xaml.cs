@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,6 +16,36 @@ namespace OfferApp1
         public viewEmpresa()
         {
             InitializeComponent();
+        }
+
+        private async void btnGuardar_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                
+                WebClient cliente = new WebClient();                
+
+                var parametros = new System.Collections.Specialized.NameValueCollection();
+                parametros.Add("NOMBRE", txtNombreComercial.Text);
+                parametros.Add("TELEFONO", txtTelefono.Text);
+                parametros.Add("DIRECCION", txtDireccion.Text);
+                parametros.Add("RAZON_SOCIAL", txtNombre.Text);
+                parametros.Add("EMAIL_EMPRESA", txtCorreo.Text);
+                parametros.Add("CIUDAD", txtCiudad.Text);
+
+                cliente.UploadValues("http://192.168.100.245/offerApp/postEmpresa.php", "POST", parametros);
+
+                await DisplayAlert("alerta", "Empresa registrada", "ok");
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("alerta", ex.Message, "ok");
+            }
+        }
+
+        private void btnIniciar_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }
