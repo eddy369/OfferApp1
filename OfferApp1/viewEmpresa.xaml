@@ -25,7 +25,7 @@
 
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
-                        <ColumnDefinition/>
+                        <ColumnDefinition/> 
                     </Grid.ColumnDefinitions>
 
                     <Entry x:Name="txtUsuario" PlaceholderColor="White" IsReadOnly="True" TextColor="Red" Grid.Row="0" Grid.Column="0" FontSize="24"/>
