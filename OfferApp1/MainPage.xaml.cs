@@ -45,7 +45,7 @@ namespace OfferApp1
             catch (Exception ex)
             {
                 //cargamos la excepción
-                DisplayAlert("ERROR Usuario o Contrasena dato Incorrecto", ex.Message, "OK");
+                await DisplayAlert("ERROR Usuario o Contrasena dato Incorrecto", ex.Message, "OK");
             }
         }
 

@@ -18,22 +18,25 @@ namespace OfferApp1
             InitializeComponent();
         }
 
-        private void btnGuardar_Clicked(object sender, EventArgs e)
+        private async void btnGuardar_Clicked(object sender, EventArgs e)
         {
             try
             {
+                int rol = 0;
                 WebClient cliente = new WebClient();
+               
+                
                 var parametros = new System.Collections.Specialized.NameValueCollection();
                 parametros.Add("EMAIL", txtCorreo.Text);
                 parametros.Add("PASSWORD", txtPassword.Text);
 
-                cliente.UploadValues("http://192.168.100.245/moviles/post.php", "POST", parametros);
+                cliente.UploadValues("http://192.168.100.245/offerApp/postUsuario.php", "POST", parametros);
 
-                DisplayAlert("alerta", "ingreso correcto", "ok");
+                await DisplayAlert("alerta", "Usuario registrado", "ok");
             }
             catch (Exception ex)
             {
-                DisplayAlert("alerta", ex.Message, "ok");
+                await DisplayAlert("alerta", ex.Message, "ok");
             }
         }
 
