@@ -26,6 +26,7 @@ namespace OfferApp1
                 WebClient cliente = new WebClient();                
 
                 var parametros = new System.Collections.Specialized.NameValueCollection();
+                parametros.Add("ID_USUARIO", "");
                 parametros.Add("NOMBRE", txtNombreComercial.Text);
                 parametros.Add("TELEFONO", txtTelefono.Text);
                 parametros.Add("DIRECCION", txtDireccion.Text);
@@ -43,9 +44,9 @@ namespace OfferApp1
             }
         }
 
-        private void btnIniciar_Clicked(object sender, EventArgs e)
+        private async void btnIniciar_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new viewCargarArchivo());
         }
     }
 }
