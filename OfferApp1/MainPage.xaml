@@ -20,6 +20,7 @@
                     <Entry x:Name="txtCorreo" Placeholder="Correo" PlaceholderColor="#E64AFF" FontSize="24"/>
                     <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" PlaceholderColor="#E64AFF" FontSize="24"/>
                     <Button x:Name="btnAbrir" Text="Iniciar Sesion" Clicked="btnAbrir_Clicked" BackgroundColor="#E64AFF" BorderRadius="20" TextColor="#35158B" FontSize="26"/>
+                    <Button x:Name="btnAbrir" Text="Registrarse" Clicked="btnRegistrarse_Clicked" BackgroundColor="#000" BorderRadius="20" TextColor="#fff" FontSize="26"/>
                 </StackLayout>
             </Grid>
         </Grid>

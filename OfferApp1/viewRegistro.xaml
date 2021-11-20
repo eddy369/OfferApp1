@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OfferApp1.viewRegistro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Grid.Row="0" Source="Offer.png" WidthRequest="200" HeightRequest="200" Margin="0,20,0,0"/>
+            <Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+
+                    <StackLayout Grid.Row="1" Padding="20,20" HorizontalOptions="Center">
+                        <Entry x:Name="txtCorreo" Placeholder="Correo" PlaceholderColor="#E64AFF" FontSize="24"/>
+                        <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" PlaceholderColor="#E64AFF" FontSize="24"/>
+                        <Button x:Name="btnAbrir" Text="Guardar" Clicked="btnGuardar_Clicked" BackgroundColor="#E64AFF" BorderRadius="20" TextColor="#35158B" FontSize="26"/>
+                        <Button x:Name="btnAbrir" Text="Salir" Clicked="btnSalir_Clicked" BackgroundColor="#000" BorderRadius="20" TextColor="#fff" FontSize="26"/>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
