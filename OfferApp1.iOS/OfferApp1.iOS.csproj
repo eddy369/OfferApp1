@@ -142,4 +142,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\wallpaperlego.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\wallpaper.jpg" />
+  </ItemGroup>
 </Project>
