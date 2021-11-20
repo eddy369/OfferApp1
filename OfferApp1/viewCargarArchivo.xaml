@@ -36,8 +36,8 @@
                     <Entry x:Name="txtTelefono" Keyboard="Numeric" TextColor="Black" Grid.Row="3" Grid.Column="1" FontSize="24"/>
 
                     <Image x:Name="Imagen" Grid.Row="1" Grid.Column="1"/>
-                    <Button x:Name="btnTomarFoto" Text="Tomar Foto" TextColor="Black" BackgroundColor="Green" BorderColor="Yellow" BorderWidth="3" Grid.Row="3" Grid.Column="0" FontSize="26" Clicked="btnTomarFoto_Clicked"/>
-                    <Button x:Name="btnSeleccionarFoto" Text="Seleccionar Foto" TextColor="Black" BackgroundColor="Green" BorderColor="Yellow" BorderWidth="3" Grid.Row="3" Grid.Column="1" FontSize="26" Clicked="btnSeleccionarFoto_Clicked"/>
+                    <Button x:Name="btnTomarFoto" Text="Hacer Foto" TextColor="Black" BackgroundColor="#2789BD" BorderColor="Yellow" BorderWidth="3" Grid.Row="3" Grid.Column="0" FontSize="26" Clicked="btnTomarFoto_Clicked"/>
+                    <Button x:Name="btnSeleccionarFoto" Text="Seleccionar Imagen" TextColor="Black" BackgroundColor="#2789BD" BorderColor="Yellow" BorderWidth="3" Grid.Row="3" Grid.Column="1" FontSize="26" Clicked="btnSeleccionarFoto_Clicked"/>
                     
                     <Label Text="Detalle del producto" TextColor="Black" Grid.Row="4" Grid.Column="0" FontSize="24"/>
                     <Entry x:Name="txtDetalle" Keyboard="Text" TextColor="Black" Grid.Row="4" Grid.Column="1" FontSize="24"/>
