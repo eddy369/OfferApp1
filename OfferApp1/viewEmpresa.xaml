@@ -34,7 +34,7 @@
                     <Label Text="Nombre" TextColor="Black" Grid.Row="2" Grid.Column="0" FontSize="24"/>
                     <Entry x:Name="txtNombre" Keyboard="Text" TextColor="Black" Grid.Row="2" Grid.Column="1" FontSize="24"/>
                     <Label Text="Telefono" TextColor="Black" Grid.Row="3" Grid.Column="0" FontSize="24"/>
-                    <Entry x:Name="txtTelefono" Keyboard="Numeric" TextColor="Black" Grid.Row="3" Grid.Column="1" FontSize="24"/>
+                    <Entry x:Name="txtTelefono" TextColor="Black" Grid.Row="3" Grid.Column="1" FontSize="24"/>
                     <Label Text="Direccion" TextColor="Black" Grid.Row="4" Grid.Column="0" FontSize="24"/>
                     <Entry x:Name="txtDireccion" Keyboard="Text" TextColor="Black" Grid.Row="4" Grid.Column="1" FontSize="24"/>
                     <Label Text="Ciudad" TextColor="Black" Grid.Row="5" Grid.Column="0" FontSize="24"/>

@@ -26,13 +26,14 @@ namespace OfferApp1
                 WebClient cliente = new WebClient();                
 
                 var parametros = new System.Collections.Specialized.NameValueCollection();
-                parametros.Add("ID_USUARIO", "");
+                parametros.Add("ID_USUARIO", "1");
                 parametros.Add("NOMBRE", txtNombreComercial.Text);
-                parametros.Add("TELEFONO", txtTelefono.Text);
-                parametros.Add("DIRECCION", txtDireccion.Text);
                 parametros.Add("RAZON_SOCIAL", txtNombre.Text);
-                parametros.Add("EMAIL_EMPRESA", txtCorreo.Text);
+                parametros.Add("DIRECCION", txtDireccion.Text);
+                parametros.Add("TELEFONO", txtTelefono.Text);
                 parametros.Add("CIUDAD", txtCiudad.Text);
+                parametros.Add("EMAIL_EMPRESA", txtCorreo.Text);
+                
 
                 cliente.UploadValues("http://192.168.100.245/offerApp/postEmpresa.php", "POST", parametros);
 
