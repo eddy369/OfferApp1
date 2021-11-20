@@ -51,9 +51,22 @@ namespace OfferApp1
             await Navigation.PushAsync(new viewCargarArchivo());
         }
 
-        private void btnSeleccionarLogo_Clicked(object sender, EventArgs e)
+        private async void btnSeleccionarLogo_Clicked(object sender, EventArgs e)
         {
+            if (!CrossMedia.Current.IsPickPhotoSupported)
+            {
+                await DisplayAlert("Photos Not Supported", ":( Permission not granted to photos.", "OK");
+                return;
+            }
+            var file = await Plugin.Media.CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions
+            {
+                PhotoSize = Plugin.Media.Abstractions.PhotoSize.Medium,
 
+            });
+
+
+            if (file == null)
+                return;
         }
     }
 }
