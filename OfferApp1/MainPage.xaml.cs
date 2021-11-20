@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,8 @@ namespace OfferApp1
 {
     public partial class MainPage : ContentPage
     {
+        
+
         public MainPage()
         {
             InitializeComponent();
@@ -17,7 +20,7 @@ namespace OfferApp1
 
         private async void btnAbrir_Clicked(object sender, EventArgs e)
         {
-            //almacenar los datos en variables
+            //almacenar los datos en variables           
             string usuario = txtCorreo.Text;
             string password = txtPassword.Text;
 

@@ -22,13 +22,20 @@ namespace OfferApp1
         {
             try
             {
-                int rol = 0;
+                var rol = "";
                 WebClient cliente = new WebClient();
-               
+                if (rbEmpresa.IsChecked == true){
+                    rol = rbEmpresa.Value.ToString();
+                }
+                else
+                {
+                    rol = "3";
+                }
                 
                 var parametros = new System.Collections.Specialized.NameValueCollection();
                 parametros.Add("EMAIL", txtCorreo.Text);
                 parametros.Add("PASSWORD", txtPassword.Text);
+                parametros.Add("ID_ROLES", rol);
 
                 cliente.UploadValues("http://192.168.100.245/offerApp/postUsuario.php", "POST", parametros);
 
