@@ -10,7 +10,7 @@ namespace OfferApp1
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new viewCargarArchivo());
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
