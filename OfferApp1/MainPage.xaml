@@ -7,18 +7,20 @@
             <Image Source="wallpaper.jpg" Aspect="AspectFill" Opacity="1"/>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="80"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="80"/>
                 </Grid.RowDefinitions>
                 <Image Grid.Row="0" Source="Offer.png" WidthRequest="200" HeightRequest="200" Margin="0,20,0,0"/>
                 <StackLayout Grid.Row="1" Padding="20,20" HorizontalOptions="Center">
                     <Entry x:Name="txtCorreo" Placeholder="Correo" PlaceholderColor="#E64AFF" FontSize="24"/>
                     <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" PlaceholderColor="#E64AFF" FontSize="24"/>
-                    <Button x:Name="btnAbrir" Text="Iniciar Sesion" Clicked="btnAbrir_Clicked" BackgroundColor="#35158B" BorderRadius="30" TextColor="#E64AFF" FontSize="26"/>
-                    <Button x:Name="btnRegistrarse" Text="Registrarse" Clicked="btnRegistrarse_Clicked"  BackgroundColor="#35158B" BorderRadius="30" TextColor="#E64AFF" FontSize="26"/>
+                    <Label x:Name=""/>
+                    <Button x:Name="btnAbrir" Text="Iniciar Sesion" Clicked="btnAbrir_Clicked" BackgroundColor="#35158B" BorderRadius="30" TextColor="#E64AFF" Padding="10,10" FontSize="26"/>
+                    <Label x:Name=""/>
+                    <Button x:Name="btnRegistrarse" Text="Registrarse" Clicked="btnRegistrarse_Clicked"  BackgroundColor="#35158B" BorderRadius="30" TextColor="#E64AFF" Padding="10,10" FontSize="26"/>
                 </StackLayout>
             </Grid>
         </Grid>
