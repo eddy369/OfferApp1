@@ -12,7 +12,7 @@
 
                                 <Grid>
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="55"/>
+                                        <ColumnDefinition Width="300"/>
                                     </Grid.ColumnDefinitions>
                                     <Label x:Name="lblCodigo" Text="{Binding NOMBRE}" Grid.Column="0"></Label>
                                 </Grid>

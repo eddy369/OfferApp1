@@ -37,11 +37,11 @@ namespace OfferApp1
 
                 else if (txtCorreo.Text != "es")
                 {
-                    await Navigation.PushAsync(null);
+                    await Navigation.PushAsync(new viewCatalogo());
                 }
                 else if (txtPassword.Text != "1234")
                 {
-                    await Navigation.PushAsync(null);
+                    await Navigation.PushAsync(new viewCatalogo());
                 }
 
             }
