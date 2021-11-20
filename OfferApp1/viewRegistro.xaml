@@ -4,27 +4,29 @@
              x:Class="OfferApp1.viewRegistro" NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
-            <Frame BackgroundColor="#330099" Padding="0" CornerRadius="0">
-                <Label Text="Registro de Usuario" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+            <Frame BackgroundColor="#2789DB" Padding="0" CornerRadius="0">
+                <Label Text="Registro de Empresa" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
             </Frame>
             <Grid>
-                <Image Source="wallpaperlego.jpg" Aspect="AspectFill"/>
+                <Image Source="wallpaper.jpg" Aspect="AspectFill" Opacity="1"/> 
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*"/> 
+                        <RowDefinition Height="*"/>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-
-
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
                     <StackLayout Grid.Row="1" Padding="20,20" HorizontalOptions="Center">
-                        <Entry x:Name="txtCorreo" Placeholder="Correo" PlaceholderColor="#fff" FontSize="24" TextColor="#fff"/>
-                        <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" PlaceholderColor="#fff" FontSize="24" TextColor="#fff"/>
-                        <RadioButton x:Name="rbEmpresa" Content="Seleccione si es empresa" TextColor="#fff" Value="2"/>
-                        <Button x:Name="btnGuardar" Text="Guardar" Clicked="btnGuardar_Clicked" BackgroundColor="Beige" BorderRadius="20" TextColor="#35158B" FontSize="26"/>
-                        <Button x:Name="btnSalir" Text="Salir" Clicked="btnSalir_Clicked" BackgroundColor="#000" BorderRadius="20" TextColor="#fff" FontSize="26"/>
+                        <Entry x:Name="txtCorreo" Placeholder="Correo" PlaceholderColor="Black" FontSize="24" TextColor="Black"/>
+                        <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" PlaceholderColor="Black" FontSize="24" TextColor="Black"/>
+                        <RadioButton x:Name="rbEmpresa" Content="Seleccione si es empresa" TextColor="Black" Value="2"/>
+                        <Button x:Name="btnGuardar" Text="Guardar" Clicked="btnGuardar_Clicked" BackgroundColor="#2789DB" BorderRadius="30" TextColor="White" Grid.Column="0" FontSize="26"/>
+                        <Button x:Name="btnSalir" Text="Salir" Clicked="btnSalir_Clicked" BackgroundColor="#2789DB" BorderRadius="30" TextColor="White" Grid.Column="1" FontSize="26"/>
                     </StackLayout>
                 </Grid>
             </Grid>
