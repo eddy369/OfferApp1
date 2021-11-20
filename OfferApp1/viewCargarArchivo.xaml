@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OfferApp1.viewCargarArchivo">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#330099" Padding="0" CornerRadius="0">
+                <Label Text="Registro de Producto" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+            </Frame>
+
+            <Grid>
+                <Image Source="wallpaperlego.jpg" Aspect="AspectFill"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Label Text="Ingresar nuevo" TextColor="White" Grid.Row="2" Grid.Column="0" FontSize="24"/>
+                    <Entry x:Name="txtIngreso" Keyboard="Text" TextColor="White" Grid.Row="2" Grid.Column="1" FontSize="24"/>
+                    
+                    <Label Text="Camara" TextColor="White" Grid.Row="3" Grid.Column="0" FontSize="24"/>
+                    <Entry x:Name="txtTelefono" Keyboard="Numeric" TextColor="White" Grid.Row="3" Grid.Column="1" FontSize="24"/>
+                    
+                    <Label Text="Detalle del producto" TextColor="White" Grid.Row="4" Grid.Column="0" FontSize="24"/>
+                    <Entry x:Name="txtDetalle" Keyboard="Text" TextColor="White" Grid.Row="4" Grid.Column="1" FontSize="24"/>
+                    
+                    <Button x:Name="btnAgregar" Text="AGREGAR" TextColor="White" BackgroundColor="Green" BorderColor="Yellow" BorderWidth="3" Grid.Row="9" Grid.ColumnSpan="2" FontSize="26"/>
+                    <Button x:Name="btnEliminar" Text="ELIMINAR" TextColor="White" BackgroundColor="Green" BorderColor="Yellow" BorderWidth="3" Grid.Row="8" Grid.Column="1" FontSize="26"/>
+                    <Button x:Name="btnEditar" Text="EDITAR" TextColor="White" BackgroundColor="Green" BorderColor="Yellow" BorderWidth="3" Grid.Row="8" Grid.Column="0" FontSize="26"/>
+
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
