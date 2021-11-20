@@ -17,8 +17,8 @@
                 <StackLayout Grid.Row="1" Padding="20,20" HorizontalOptions="Center">
                     <Entry x:Name="txtCorreo" Placeholder="Correo" PlaceholderColor="#E64AFF" FontSize="24"/>
                     <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" PlaceholderColor="#E64AFF" FontSize="24"/>
-                    <Button x:Name="btnAbrir" Text="Iniciar Sesion" Clicked="btnAbrir_Clicked" BackgroundColor="#E64AFF" BorderRadius="30" TextColor="#35158B" FontSize="26"/>
-                    <Button x:Name="btnRegistrarse" Text="Registrarse" Clicked="btnRegistrarse_Clicked"  BackgroundColor="#E64AFF" BorderRadius="30" TextColor="#35158B" FontSize="26"/>
+                    <Button x:Name="btnAbrir" Text="Iniciar Sesion" Clicked="btnAbrir_Clicked" BackgroundColor="#35158B" BorderRadius="30" TextColor="#E64AFF" FontSize="26"/>
+                    <Button x:Name="btnRegistrarse" Text="Registrarse" Clicked="btnRegistrarse_Clicked"  BackgroundColor="#35158B" BorderRadius="30" TextColor="#E64AFF" FontSize="26"/>
                 </StackLayout>
             </Grid>
         </Grid>
