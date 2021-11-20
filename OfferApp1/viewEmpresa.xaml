@@ -44,7 +44,8 @@
                     <Label Text="Correo" TextColor="Black" Grid.Row="7" Grid.Column="0" FontSize="24"/>
                     <Entry x:Name="txtCorreo" Keyboard="Text" TextColor="Black" Grid.Row="7" Grid.Column="1" FontSize="24"/>
                     <Label Text="Logo" Grid.Row="8" Grid.Column="0" FontSize="24"/>
-                    <Entry x:Name="txtLogo" Grid.Row="8" Grid.Column="1" FontSize="24"/>
+                    <Button x:Name="btnSeleccionarLogo" Text="Seleccionar Imagen" TextColor="Black" BackgroundColor="#2789BD" BorderColor="Yellow" BorderWidth="3" Grid.Row="8" Grid.Column="1" FontSize="26" Clicked="btnSeleccionarLogo_Clicked"/>
+                   
                     <Button x:Name="btnGuardar" Text="GUARDAR" TextColor="White" BackgroundColor="#2789DB" BorderColor="Yellow" BorderWidth="3" Grid.Row="9" Grid.Column="0" BorderRadius="30"  FontSize="26" Clicked="btnGuardar_Clicked"/>
                     <Button x:Name="btnIniciar" Text="INICIAR" TextColor="White" BackgroundColor="#2789DB" BorderColor="Yellow" BorderWidth="3" Grid.Row="9" Grid.Column="1" BorderRadius="30"  FontSize="26" Clicked="btnIniciar_Clicked"/>
                 </Grid>

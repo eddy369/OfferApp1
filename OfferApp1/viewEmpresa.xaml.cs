@@ -49,5 +49,10 @@ namespace OfferApp1
         {
             await Navigation.PushAsync(new viewCargarArchivo());
         }
+
+        private void btnSeleccionarLogo_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
