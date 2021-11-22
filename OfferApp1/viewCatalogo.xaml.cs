@@ -18,7 +18,7 @@ namespace OfferApp1
         private const string Url = "http://192.168.100.245/offerApp/postEmpresa.php";
         private readonly HttpClient client = new HttpClient();
         private ObservableCollection<OfferApp1.DatosEmpresa> _post;
-        public viewCatalogo()
+        public viewCatalogo(int id)
         {
             InitializeComponent();
             get();
@@ -26,11 +26,20 @@ namespace OfferApp1
 
         private async void get()
         {
-            var content = await client.GetStringAsync(Url);
-            List<OfferApp1.DatosEmpresa> post = JsonConvert.DeserializeObject<List<OfferApp1.DatosEmpresa>>(content);
-            _post = new ObservableCollection<OfferApp1.DatosEmpresa>(post);
+            try
+            {
+                var content = await client.GetStringAsync(Url);
+                List<OfferApp1.DatosEmpresa> post = JsonConvert.DeserializeObject<List<OfferApp1.DatosEmpresa>>(content);
+                _post = new ObservableCollection<OfferApp1.DatosEmpresa>(post);
 
-            MyListView.ItemsSource = _post;
+                MyListView.ItemsSource = _post;
+
+            }
+            catch(Exception ex)
+            {
+               await DisplayAlert("error", ex.Message, "OK");
+            }
+            
 
         }
 

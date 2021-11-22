@@ -28,8 +28,8 @@
                         <ColumnDefinition/> 
                     </Grid.ColumnDefinitions>
 
-                    <Entry x:Name="txtUsuario" PlaceholderColor="White" IsReadOnly="True" TextColor="Red" Grid.Row="0" Grid.Column="0" FontSize="24"/>
-                    <Label Text="CONECTADO" HorizontalTextAlignment="Center" TextColor="Red" Grid.Row="0" Grid.Column="1" FontSize="24"/>
+                    <Entry x:Name="txtUsuario" PlaceholderColor="White" IsVisible="false" TextColor="Red" Grid.Row="0" Grid.Column="0" FontSize="24"/>
+                    <Label Text="CONECTADO" HorizontalTextAlignment="Center" TextColor="Red" Grid.Row="0" Grid.Column="1" FontSize="24" IsVisible="false"/>
 
                     <Label Text="Nombre" TextColor="Black" Grid.Row="2" Grid.Column="0" FontSize="24"/>
                     <Entry x:Name="txtNombre" Keyboard="Text" TextColor="Black" Grid.Row="2" Grid.Column="1" FontSize="24"/>
