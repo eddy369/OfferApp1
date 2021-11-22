@@ -16,7 +16,7 @@ namespace OfferApp1
     {
         public viewEmpresa()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
 
         private async void btnGuardar_Clicked(object sender, EventArgs e)
