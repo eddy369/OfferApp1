@@ -49,7 +49,7 @@ namespace OfferApp1
 
         private async void btnSalir_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MainPage());
+            await Navigation.PushAsync(new viewLogin());
         }
     }
 }
