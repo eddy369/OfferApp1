@@ -12,7 +12,7 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Image Grid.Row="0" Source="Offer.png" WidthRequest="200" HeightRequest="200" Margin="0,20,0,0"/>
+                    <Image Grid.Row="0" Source="Offer.png" WidthRequest="200" HeightRequest="200" Margin="0,20,0,0"/> 
                     <StackLayout Grid.Row="1" Padding="20,20" HorizontalOptions="Center">
                         <Entry x:Name="txtCorreo" Placeholder="Correo" PlaceholderColor="#E64AFF" FontSize="24"/>
                         <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" PlaceholderColor="#E64AFF" FontSize="24"/>
