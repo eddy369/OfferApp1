@@ -45,6 +45,9 @@
                     <Label Text="Precio" TextColor="Black" Grid.Row="5" Grid.Column="0" FontSize="24"/>
                     <Entry x:Name="txtPrecio" Keyboard="Numeric" TextColor="Black" Grid.Row="5" Grid.Column="1" FontSize="24"/>
                     
+                    
+                    
+                    
                     <Button x:Name="btnAgregar" Text="AGREGAR" TextColor="Black" BackgroundColor="#2789BD" BorderColor="Yellow" BorderWidth="3" Grid.Row="8" Grid.ColumnSpan="0" FontSize="26"/>
                     <Button x:Name="btnEditar" Text="EDITAR" TextColor="Black" BackgroundColor="#2789BD" BorderColor="Yellow" BorderWidth="3" Grid.Row="8" Grid.Column="1" FontSize="26"/>
                     <Button x:Name="btnEliminar" Text="ELIMINAR" TextColor="Black" BackgroundColor="#2789BD" BorderColor="Yellow" BorderWidth="3" Grid.Row="9" Grid.Column="0" FontSize="26"/>
