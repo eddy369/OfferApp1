@@ -56,13 +56,14 @@ namespace OfferApp1
 
                     if (email == usuario && pass == password)
                     {
-                        if (rol == 2)
+                       if (rol==1 || rol == 2)
                         {
-                            await Navigation.PushAsync(new viewEmpresa(id));
+                            await Navigation.PushAsync(new DetalleEmpresa(id));
+                           // await Navigation.PushAsync(new viewEmpresa(id));
                         }
                         else
                         {
-                            await Navigation.PushAsync(new viewCatalogo(id));
+                            await Navigation.PushAsync(new viewCatalogo(1));
                         }
                         ok = "si";
                         await DisplayAlert("BIENVENIDO", email, "OK");

@@ -46,15 +46,15 @@ namespace OfferApp1
                 await DisplayAlert("alerta", ex.Message, "ok");
             }
         }
-
-        private async void btnIniciar_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new viewCargarArchivo());
-        }
-
+                
         private async void btnSeleccionarLogo_Clicked(object sender, EventArgs e)
         {
             
+        }
+
+        private async void btnSalir_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DetalleEmpresa(Convert.ToInt32(txtUsuario.Text)));
         }
     }
 }

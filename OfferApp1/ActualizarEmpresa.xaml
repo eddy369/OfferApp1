@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OfferApp1.ActualizarEmpresa" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#330099" Padding="0" CornerRadius="0">
+                <Label Text="Actualizar Datos" HorizontalTextAlignment="Center" TextColor="White" FontSize="28" Padding="15"/>
+            </Frame>            
+            <Entry x:Name="txtId" IsVisible="false" />
+            <Entry x:Name="txtUsuario" IsVisible="false"/>
+            <Entry x:Name="txtLogueado" IsVisible="false"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>                
+
+                <Label Text="NOMBRE" Grid.Row="0" Grid.Column="0" FontSize="22" BackgroundColor="Violet" TextColor="Black" Padding="10"/>
+                <Entry x:Name="txtNombre" Grid.Row="0" Grid.Column="1" FontSize="20" TextColor="Black" BackgroundColor="Beige"/>
+
+                <Label Text="TELEFONO" Grid.Row="1" Grid.Column="0" FontSize="22" BackgroundColor="Violet" TextColor="Black" Padding="10"/>
+                <Entry x:Name="txtTelefono" Grid.Row="1" Grid.Column="1" FontSize="20" TextColor="Black" BackgroundColor="Beige"/>
+
+                <Label Text="DIRECCION" Grid.Row="2" Grid.Column="0" FontSize="22" BackgroundColor="Violet" TextColor="Black" Padding="10"/>
+                <Entry x:Name="txtDireccion" Grid.Row="2" Grid.Column="1" FontSize="20" TextColor="Black" BackgroundColor="Beige"/>
+
+                <Label Text="RAZON SOCIAL" Grid.Row="3" Grid.Column="0" FontSize="22" BackgroundColor="Violet" TextColor="Black" Padding="10"/>
+                <Entry x:Name="txtRazon" Grid.Row="3" Grid.Column="1" FontSize="20" TextColor="Black" BackgroundColor="Beige"/>
+
+                <Label Text="EMAIL" Grid.Row="4" Grid.Column="0" FontSize="22" BackgroundColor="Violet" TextColor="Black" Padding="10"/>
+                <Entry x:Name="txtEmail" Grid.Row="4" Grid.Column="1" FontSize="20" TextColor="Black" BackgroundColor="Beige"/>
+
+                <Label Text="CIUDAD" Grid.Row="5" Grid.Column="0" FontSize="22" BackgroundColor="Violet" TextColor="Black" Padding="10"/>
+                <Entry x:Name="txtCiudad" Grid.Row="5" Grid.Column="1" FontSize="20" TextColor="Black" BackgroundColor="Beige"/>
+
+                <Button x:Name="btningresar" Text="Actualizar" Clicked="btnactualizar_Clicked" Grid.Row="6" Grid.Column="0" BackgroundColor="#330099" TextColor="White" FontSize="20" BorderRadius="20"/>
+                <Button x:Name="btnregresar" Text="Salir" Clicked="btnregresar_Clicked" Grid.Row="6" Grid.Column="1" BackgroundColor="#330099" TextColor="White" FontSize="20" BorderRadius="25"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
