@@ -14,9 +14,10 @@ namespace OfferApp1
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class viewEmpresa : ContentPage
     {
-        public viewEmpresa()
+        public viewEmpresa(int id)
         {
-            InitializeComponent(); 
+            InitializeComponent();
+            txtUsuario.Text = id.ToString();
         }
 
         private async void btnGuardar_Clicked(object sender, EventArgs e)
@@ -27,7 +28,7 @@ namespace OfferApp1
                 WebClient cliente = new WebClient();                
 
                 var parametros = new System.Collections.Specialized.NameValueCollection();
-                parametros.Add("ID_USUARIO", "1");
+                parametros.Add("ID_USUARIO", txtUsuario.Text);
                 parametros.Add("NOMBRE", txtNombreComercial.Text);
                 parametros.Add("RAZON_SOCIAL", txtNombre.Text);
                 parametros.Add("DIRECCION", txtDireccion.Text);
@@ -45,15 +46,15 @@ namespace OfferApp1
                 await DisplayAlert("alerta", ex.Message, "ok");
             }
         }
-
-        private async void btnIniciar_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new viewCargarArchivo());
-        }
-
+                
         private async void btnSeleccionarLogo_Clicked(object sender, EventArgs e)
         {
             
+        }
+
+        private async void btnSalir_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DetalleEmpresa(Convert.ToInt32(txtUsuario.Text)));
         }
     }
 }

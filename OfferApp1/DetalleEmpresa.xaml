@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OfferApp1.DetalleEmpresa" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#330099" Padding="0" CornerRadius="0">
+                <Label Text="Detalle Empresa" HorizontalTextAlignment="Center" TextColor="White" FontSize="28" Padding="15"/>
+            </Frame>
+            <Entry x:Name="txtLogueado" IsVisible="false"/>
+            <Grid Margin="0,20,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnNuevo" Text="Nuevo" Clicked="btnNuevo_Clicked" BackgroundColor="GreenYellow" FontSize="20" BorderRadius="20" BorderColor="#35158B" BorderWidth="2"/>
+                <Button x:Name="btnActualizar" Text="Actualizar" Clicked="btnActualizar_Clicked" Grid.Column="1" BackgroundColor="GreenYellow" BorderColor="#35158B" BorderRadius="20" TextColor="#35158B" BorderWidth="2" FontSize="20"/>
+                <Button x:Name="btnProductos" Text="Ver Productos" Clicked="btnProductos_Clicked" Grid.Column="2" BackgroundColor="GreenYellow" BorderColor="#35158B" BorderRadius="20" TextColor="#35158B" BorderWidth="2" FontSize="20"/>
+
+            </Grid>
+            <Grid BackgroundColor="#35158B">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="EMPRESA" Grid.Column="0" HorizontalTextAlignment="Center" TextColor="White" FontSize="22" VerticalTextAlignment="Center"/>
+                <Label Text="EMAIL" Grid.Column="1" HorizontalTextAlignment="Center" TextColor="White" FontSize="22" VerticalTextAlignment="Center"/>
+                <Label Text="TELEFONO" Grid.Column="2" HorizontalTextAlignment="Center" TextColor="White" FontSize="22" VerticalTextAlignment="Center"/>
+            </Grid>
+            <ListView x:Name="MyListEmpresa" SelectedItem="{Binding ID_EMPRESA}" SeparatorColor="#330099">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Grid>
+                                    
+                                    <Grid>
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label x:Name="lblNombre" Text="{Binding NOMBRE}" Grid.Column="0" TextColor="Black" FontSize="18"/>
+                                        <Label x:Name="lblDireccion" Text="{Binding EMAIL_EMPRESA}" Grid.Column="1" TextColor="Black" FontSize="18"/>
+                                        <Label x:Name="lblTelefono" Text="{Binding TELEFONO}" Grid.Column="2" TextColor="Black" FontSize="18"/>
+                                    </Grid>
+                                </Grid>                                
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

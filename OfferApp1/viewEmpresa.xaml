@@ -4,50 +4,49 @@
              x:Class="OfferApp1.viewEmpresa" NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout>
-            <Frame BackgroundColor="#2789DB" Padding="0" CornerRadius="0">
+            <Frame BackgroundColor="#35158B" Padding="20" CornerRadius="0">
                 <Label Text="Registre su Empresa" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
             </Frame>
             <Grid>
-                <Image Source="wallpape.jpg" Aspect="AspectFill" Opacity="1"/>
+                <Image Source="wallpaper.jpg" Aspect="AspectFill" Opacity="1"/>
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
+                        <RowDefinition Height="0"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="60"/>
                     </Grid.RowDefinitions>
 
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
+                        <ColumnDefinition Width="200"/>
                         <ColumnDefinition/> 
                     </Grid.ColumnDefinitions>
 
-                    <Entry x:Name="txtUsuario" PlaceholderColor="White" IsReadOnly="True" TextColor="Red" Grid.Row="0" Grid.Column="0" FontSize="24"/>
-                    <Label Text="CONECTADO" HorizontalTextAlignment="Center" TextColor="Red" Grid.Row="0" Grid.Column="1" FontSize="24"/>
+                    <Entry x:Name="txtUsuario" PlaceholderColor="White" IsVisible="false" TextColor="Red" Grid.Row="0" Grid.Column="0" FontSize="24"/>
+                    <Label Text="CONECTADO" HorizontalTextAlignment="Center" TextColor="Red" Grid.Row="0" Grid.Column="1" FontSize="24" IsVisible="false"/>
 
-                    <Label Text="Nombre" TextColor="Black" Grid.Row="2" Grid.Column="0" FontSize="24"/>
-                    <Entry x:Name="txtNombre" Keyboard="Text" TextColor="Black" Grid.Row="2" Grid.Column="1" FontSize="24"/>
-                    <Label Text="Telefono" TextColor="Black" Grid.Row="3" Grid.Column="0" FontSize="24"/>
-                    <Entry x:Name="txtTelefono" TextColor="Black" Grid.Row="3" Grid.Column="1" FontSize="24"/>
-                    <Label Text="Direccion" TextColor="Black" Grid.Row="4" Grid.Column="0" FontSize="24"/>
-                    <Entry x:Name="txtDireccion" Keyboard="Text" TextColor="Black" Grid.Row="4" Grid.Column="1" FontSize="24"/>
-                    <Label Text="Ciudad" TextColor="Black" Grid.Row="5" Grid.Column="0" FontSize="24"/>
-                    <Entry x:Name="txtCiudad" Keyboard="Text" TextColor="Black" Grid.Row="5" Grid.Column="1" FontSize="24"/>
-                    <Label Text="Nombre Comercial" TextColor="Black" Grid.Row="6" Grid.Column="0" FontSize="24"/>
-                    <Entry x:Name="txtNombreComercial" Keyboard="Text" TextColor="Black" Grid.Row="6" Grid.Column="1" FontSize="24"/>
-                    <Label Text="Correo" TextColor="Black" Grid.Row="7" Grid.Column="0" FontSize="24"/>
-                    <Entry x:Name="txtCorreo" Keyboard="Text" TextColor="Black" Grid.Row="7" Grid.Column="1" FontSize="24"/>
-                    <Label Text="Logo" Grid.Row="8" Grid.Column="0" FontSize="24"/>
-                    <Button x:Name="btnSeleccionarLogo" Text="Seleccionar Imagen" TextColor="Black" BackgroundColor="#2789BD" BorderColor="Yellow" BorderWidth="3" Grid.Row="8" Grid.Column="1" FontSize="26" Clicked="btnSeleccionarLogo_Clicked"/>
-                   
-                    <Button x:Name="btnGuardar" Text="GUARDAR" TextColor="White" BackgroundColor="#2789DB" BorderColor="Yellow" BorderWidth="3" Grid.Row="9" Grid.Column="0" BorderRadius="30"  FontSize="26" Clicked="btnGuardar_Clicked"/>
-                    <Button x:Name="btnIniciar" Text="INICIAR" TextColor="White" BackgroundColor="#2789DB" BorderColor="Yellow" BorderWidth="3" Grid.Row="9" Grid.Column="1" BorderRadius="30"  FontSize="26" Clicked="btnIniciar_Clicked"/>
+                    <Label Text="Nombre" TextColor="Black" Grid.Row="1" Grid.Column="0" FontSize="24"/>
+                    <Entry x:Name="txtNombre" Keyboard="Text" TextColor="Black" Grid.Row="1" Grid.Column="1" FontSize="24"/>
+                    <Label Text="Telefono" TextColor="Black" Grid.Row="2" Grid.Column="0" FontSize="24"/>
+                    <Entry x:Name="txtTelefono" TextColor="Black" Grid.Row="2" Grid.Column="1" FontSize="24"/>
+                    <Label Text="Direccion" TextColor="Black" Grid.Row="3" Grid.Column="0" FontSize="24"/>
+                    <Entry x:Name="txtDireccion" Keyboard="Text" TextColor="Black" Grid.Row="3" Grid.Column="1" FontSize="24"/>
+                    <Label Text="Ciudad" TextColor="Black" Grid.Row="4" Grid.Column="0" FontSize="24"/>
+                    <Entry x:Name="txtCiudad" Keyboard="Text" TextColor="Black" Grid.Row="4" Grid.Column="1" FontSize="24"/>
+                    <Label Text="Nombre Comercial" TextColor="Black" Grid.Row="5" Grid.Column="0" FontSize="24"/>
+                    <Entry x:Name="txtNombreComercial" Keyboard="Text" TextColor="Black" Grid.Row="5" Grid.Column="1" FontSize="24"/>
+                    <Label Text="Correo" TextColor="Black" Grid.Row="6" Grid.Column="0" FontSize="24"/>
+                    <Entry x:Name="txtCorreo" Keyboard="Text" TextColor="Black" Grid.Row="6" Grid.Column="1" FontSize="24"/>
+                    <Label Text="Logo" Grid.Row="7" Grid.Column="0" FontSize="24" TextColor="Black"/>
+                    <Button x:Name="btnSeleccionarLogo" Text="Seleccionar Imagen" TextColor="Black" BackgroundColor="Violet" BorderRadius="20" BorderWidth="3" Grid.Row="7" Grid.Column="1" FontSize="20" Clicked="btnSeleccionarLogo_Clicked" Margin="60,0"/>
+
+                    <Button x:Name="btnGuardar" Text="GUARDAR" TextColor="White" BackgroundColor="#35158B" BorderWidth="3" Grid.Row="8" Grid.Column="0" BorderRadius="30"  FontSize="26" Clicked="btnGuardar_Clicked"/>
+                    <Button x:Name="btnSalir" Text="Salir" TextColor="White" BackgroundColor="#35158B" BorderWidth="3" Grid.Row="8" Grid.Column="1" BorderRadius="30"  FontSize="26" Clicked="btnSalir_Clicked"/>
                 </Grid>
             </Grid>
         </StackLayout>
