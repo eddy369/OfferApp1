@@ -1,7 +1,10 @@
-﻿using Plugin.Media;
+﻿using Android.Content;
+using Plugin.Media;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -75,6 +78,41 @@ namespace OfferApp1
                 file.Dispose();
                 return stream;
             });
+        }
+
+        private async void btnAgregar_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                WebClient cliente = new WebClient();
+                var parametros = new System.Collections.Specialized.NameValueCollection();
+
+
+                parametros.Add("ID_EMPRESA", txtIdEmpresa.Text);
+                parametros.Add("NOMBRE_PRODUCTO", txtNombreP.Text);
+                parametros.Add("PVP", txtPrecio.Text);
+                parametros.Add("CODIGO", txtCodigo.Text);
+                //parametros.Add(new StreamContent(Imagen.GetStream()), "IMAGEN");
+                //parametros.Add("IMAGEN", Image.);
+
+                cliente.UploadValues("http://192.168.0.10/offerapp/postProducto.php?", "POST", parametros);
+
+                await DisplayAlert("Notificación", "Producto ingresado correctamente...", "OK");
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Alerta", "Error: " + ex.Message, "OK");
+            }
+        }
+
+        private void btnEditar_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }
