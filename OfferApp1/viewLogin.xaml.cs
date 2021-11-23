@@ -32,10 +32,7 @@ namespace OfferApp1
 
             try
             {
-               /* WebClient cliente = new WebClient();
-                var parametros = new System.Collections.Specialized.NameValueCollection();
-                var resultado = cliente.UploadValues(Url+ "?EMAIL="+usuario+ "&PASSWORD="+password, "POST", parametros);
-                var respuesta = BitConverter.ToBoolean(resultado,resultado.Length);*/
+               
 
                 var content = await client.GetStringAsync(Url);
                 List<OfferApp1.DatosUsuario> post = JsonConvert.DeserializeObject<List<OfferApp1.DatosUsuario>>(content);
@@ -77,24 +74,7 @@ namespace OfferApp1
                     await DisplayAlert("ERROR", "usuario o contrasenia incorrectos", "OK");
                 }
 
-                //var consulta = post.IndexOf(data);
-
-                //if (data.EMAIL==usuario)
-                //{
-                    //accion navegar a ventana dos
-                    //await Navigation.PushAsync(new viewEmpresa());
-                    //ALERTA O MENSAJE QUE SE VISUALIZA
-                    //await DisplayAlert("BIENVENIDO", r, "OK");
-                //}
-
-                /*else if (txtCorreo.Text != "es")
-                {
-                    await Navigation.PushAsync(new viewCatalogo());
-                }
-                else if (txtPassword.Text != "1234")
-                {
-                    await Navigation.PushAsync(new viewCatalogo());
-                }*/
+                
 
             }
             catch (Exception ex)
