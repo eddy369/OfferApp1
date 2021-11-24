@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OfferApp1.Catalogo">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#330099" Padding="0" CornerRadius="0">
+                <Label Text="Productos Disponibles" HorizontalTextAlignment="Center" TextColor="White" FontSize="28" Padding="15"/>
+            </Frame>
+            <Entry x:Name="txtEmpresa" IsVisible="false"/>
+            <Entry x:Name="txtName" IsVisible="false"/>
+            <Grid Margin="0,20,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="300"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnDetalle" Text="Ver detalle de producto" Grid.Column="2" Clicked="btnDetalle_Clicked" BackgroundColor="GreenYellow" FontSize="20" BorderRadius="20" BorderColor="#35158B" BorderWidth="2"/>
+                
+            </Grid>
+            <Grid BackgroundColor="#35158B">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="IMAGEN"  Grid.Column="0" HorizontalTextAlignment="Center" TextColor="White" FontSize="22" VerticalTextAlignment="Center"/>                
+                <Label Text="NOMBRE" Grid.Column="1" HorizontalTextAlignment="Center" TextColor="White" FontSize="22" VerticalTextAlignment="Center"/>
+                <Label Text="PRECIO" Grid.Column="2" HorizontalTextAlignment="Center" TextColor="White" FontSize="22" VerticalTextAlignment="Center"/>
+            </Grid>
+            <ListView x:Name="MyListProductos" SelectedItem="{Binding ID_PRODUCTO}" SeparatorColor="#330099">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Grid>
+
+                                    <Grid>
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <Image Source="wallpaper.jpg" Grid.Column="0" Aspect="AspectFill"/>                                        
+                                        <Label x:Name="lblNombre" Text="{Binding NOMBRE_PRODUCTO}" Grid.Column="1" TextColor="Black" FontSize="18"/>
+                                        <Label x:Name="lblPrecio" Text="{Binding PVP}" Grid.Column="2" TextColor="Black" FontSize="18" HorizontalTextAlignment="Center"/>
+                                    </Grid>
+                                </Grid>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

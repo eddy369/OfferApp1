@@ -43,5 +43,20 @@ namespace OfferApp1
 
         }
 
+        private async void btnVer_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                DatosEmpresa c = MyListView.SelectedItem as DatosEmpresa;
+                int id = c.ID_EMPRESA;
+                string name = c.NOMBRE;
+                await Navigation.PushAsync(new Catalogo(id,name));
+            }
+            catch
+            {
+                await DisplayAlert("Alerta", "Seleccione una Empresa", "ok");
+            }
+            
+        }
     }
 }

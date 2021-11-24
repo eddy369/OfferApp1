@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OfferApp1.Producto">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#330099" Padding="0" CornerRadius="0">
+                <Label Text="Detalle Producto" HorizontalTextAlignment="Center" TextColor="White" FontSize="28" Padding="15"/>
+            </Frame>
+            <Entry x:Name="txtId" IsVisible="false" />
+            <Entry x:Name="txtEmpresa" IsVisible="false"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Image Source="wallpaper.jpg" Grid.Row="0" Aspect="AspectFill" HeightRequest="400"/>
+                <StackLayout Grid.Row="1" Padding="20,20" HorizontalOptions="Center">
+                    <Label x:Name="lblEmpresa" TextColor="#000" FontSize="26"/>
+                    <Label x:Name="lblNombre" TextColor="#000" FontSize="26"/>
+                    <Label x:Name="lblPVP" TextColor="#000" FontSize="26"/>
+                    <Label x:Name="lblDescrip" VerticalOptions="CenterAndExpand" Margin="10, 0" TextColor="#000" FontSize="20"/>                    
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

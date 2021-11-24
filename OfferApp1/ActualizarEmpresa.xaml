@@ -14,7 +14,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="60"/>
                     <RowDefinition/>
-                    <RowDefinition Height="80"/>
+                    <RowDefinition Height="auto"/>
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
@@ -32,7 +32,7 @@
                 <Entry x:Name="txtTelefono" Grid.Row="1" Grid.Column="1" FontSize="20" TextColor="Black" BackgroundColor="Beige"/>
 
                 <Label Text="DIRECCION" Grid.Row="2" Grid.Column="0" FontSize="22" BackgroundColor="Violet" TextColor="Black" Padding="10"/>
-                <Entry x:Name="txtDireccion" Grid.Row="2" Grid.Column="1" FontSize="20" TextColor="Black" BackgroundColor="Beige"/>
+                <Editor x:Name="txtDireccion" Grid.Row="2" Grid.Column="1" FontSize="20" TextColor="Black" BackgroundColor="Beige"/>
 
                 <Label Text="RAZON SOCIAL" Grid.Row="3" Grid.Column="0" FontSize="22" BackgroundColor="Violet" TextColor="Black" Padding="10"/>
                 <Entry x:Name="txtRazon" Grid.Row="3" Grid.Column="1" FontSize="20" TextColor="Black" BackgroundColor="Beige"/>

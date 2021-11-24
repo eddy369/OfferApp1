@@ -14,7 +14,7 @@
                         <RowDefinition Height="0"/>
                         <RowDefinition Height="60"/>
                         <RowDefinition Height="60"/>
-                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="auto"/>
                         <RowDefinition Height="60"/>
                         <RowDefinition Height="60"/>
                         <RowDefinition Height="60"/>
@@ -35,7 +35,7 @@
                     <Label Text="Telefono" TextColor="Black" Grid.Row="2" Grid.Column="0" FontSize="24"/>
                     <Entry x:Name="txtTelefono" TextColor="Black" Grid.Row="2" Grid.Column="1" FontSize="24"/>
                     <Label Text="Direccion" TextColor="Black" Grid.Row="3" Grid.Column="0" FontSize="24"/>
-                    <Entry x:Name="txtDireccion" Keyboard="Text" TextColor="Black" Grid.Row="3" Grid.Column="1" FontSize="24"/>
+                    <Editor x:Name="txtDireccion" Keyboard="Text" TextColor="Black" Grid.Row="3" Grid.Column="1" FontSize="24"/>
                     <Label Text="Ciudad" TextColor="Black" Grid.Row="4" Grid.Column="0" FontSize="24"/>
                     <Entry x:Name="txtCiudad" Keyboard="Text" TextColor="Black" Grid.Row="4" Grid.Column="1" FontSize="24"/>
                     <Label Text="Nombre Comercial" TextColor="Black" Grid.Row="5" Grid.Column="0" FontSize="24"/>
@@ -44,8 +44,9 @@
                     <Entry x:Name="txtCorreo" Keyboard="Text" TextColor="Black" Grid.Row="6" Grid.Column="1" FontSize="24"/>
                     <Label Text="Logo" Grid.Row="7" Grid.Column="0" FontSize="24" TextColor="Black"/>
                     <Button x:Name="btnSeleccionarLogo" Text="Seleccionar Imagen" TextColor="Black" BackgroundColor="Violet" BorderRadius="20" BorderWidth="3" Grid.Row="7" Grid.Column="1" FontSize="20" Clicked="btnSeleccionarLogo_Clicked" Margin="60,0"/>
+                    
 
-                    <Button x:Name="btnGuardar" Text="GUARDAR" TextColor="White" BackgroundColor="#35158B" BorderWidth="3" Grid.Row="8" Grid.Column="0" BorderRadius="30"  FontSize="26" Clicked="btnGuardar_Clicked"/>
+                     <Button x:Name="btnGuardar" Text="GUARDAR" TextColor="White" BackgroundColor="#35158B" BorderWidth="3" Grid.Row="8" Grid.Column="0" BorderRadius="30"  FontSize="26" Clicked="btnGuardar_Clicked"/>
                     <Button x:Name="btnSalir" Text="Salir" TextColor="White" BackgroundColor="#35158B" BorderWidth="3" Grid.Row="8" Grid.Column="1" BorderRadius="30"  FontSize="26" Clicked="btnSalir_Clicked"/>
                 </Grid>
             </Grid>

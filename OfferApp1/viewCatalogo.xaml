@@ -4,9 +4,36 @@
              x:Class="OfferApp1.viewCatalogo" NavigationPage.HasNavigationBar="False">
     
         <StackLayout>
-            <Label Text="CATEGORIAS" FontSize="20" HorizontalTextAlignment="Center"/>
-
-            <ListView x:Name="MyListView" SelectedItem="{Binding ID_EMPRESA}" >
+        <Frame BackgroundColor="#35158B" Padding="20" CornerRadius="0">
+            <Label Text="Catálogo Empresas" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
+        </Frame>
+        <Grid Margin="0,20,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="400"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnVer" Text="Ver catálogo de productos" Grid.Column="2" Clicked="btnVer_Clicked" BackgroundColor="GreenYellow" FontSize="20" BorderRadius="20" BorderColor="#35158B" BorderWidth="2"/>
+            
+        </Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="LOGO"  Grid.Column="0" HorizontalTextAlignment="Center" TextColor="Black" FontSize="22" VerticalTextAlignment="Center"/>
+            <Label Text="EMPRESA" Grid.Column="1" HorizontalTextAlignment="Center" TextColor="Black" FontSize="22" VerticalTextAlignment="Center"/>
+            <Label Text="CIUDAD" Grid.Column="2" HorizontalTextAlignment="Center" TextColor="Black" FontSize="22" VerticalTextAlignment="Center"/>
+            
+        </Grid>
+        <ListView x:Name="MyListView" SelectedItem="{Binding ID_EMPRESA}" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -14,9 +41,11 @@
 
                                 <Grid>
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="300"/>
+                                        <ColumnDefinition/>
                                     </Grid.ColumnDefinitions>
-                                    <Label x:Name="lblCodigo" Text="{Binding NOMBRE}" Grid.Column="0"></Label>
+                                    <Image Source="wallpaper.jpg" Grid.Column="0" Aspect="AspectFill"/>
+                                    <Label x:Name="lblCodigo" Text="{Binding NOMBRE}" Grid.Column="1"/>
+                                    <Label x:Name="lblCiudad" Text="{Binding CIUDAD}" Grid.Column="2"/>
                                 </Grid>
                             </StackLayout>
                         </ViewCell>
