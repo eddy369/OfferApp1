@@ -64,14 +64,25 @@ namespace OfferApp1
             }
             catch(Exception ex)
             {
-                await DisplayAlert("Alerta", "Seleccione el registro que desea actualizar", "ok");
+                await DisplayAlert("Alerta", "Seleccione la empresa que desea actualizar", "ok");
             }
             
         }
 
-        private void btnProductos_Clicked(object sender, EventArgs e)
+        private async void btnProductos_Clicked(object sender, EventArgs e)
         {
+            try
+            {
+                DatosEmpresa c = MyListEmpresa.SelectedItem as DatosEmpresa;
+                int id = c.ID_EMPRESA;
+                await Navigation.PushAsync(new DetalleProductos(id));
 
+            }
+            catch(Exception ex)
+            {
+                await DisplayAlert("Alerta", "Seleccione la Empresa", "ok");
+            }
+            
         }
 
         private async void btnNuevo_Clicked(object sender, EventArgs e)
