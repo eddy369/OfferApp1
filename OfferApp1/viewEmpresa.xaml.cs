@@ -1,8 +1,11 @@
-﻿using Plugin.Media;
+﻿using Newtonsoft.Json;
+using Plugin.Media;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,6 +17,8 @@ namespace OfferApp1
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class viewEmpresa : ContentPage
     {
+        private readonly HttpClient client = new HttpClient();
+        private ObservableCollection<OfferApp1.DatosEmpresa> _post;
         public viewEmpresa(int id)
         {
             InitializeComponent();
@@ -35,11 +40,37 @@ namespace OfferApp1
                 parametros.Add("TELEFONO", txtTelefono.Text);
                 parametros.Add("CIUDAD", txtCiudad.Text);
                 parametros.Add("EMAIL_EMPRESA", txtCorreo.Text);
+
+                var content = await client.GetStringAsync("http://192.168.100.245/offerApp/postEmpresa.php?ID_USUARIO="+txtUsuario.Text);
+                List<OfferApp1.DatosEmpresa> post = JsonConvert.DeserializeObject<List<OfferApp1.DatosEmpresa>>(content);
+                _post = new ObservableCollection<OfferApp1.DatosEmpresa>(post);
+
+                var usuario = 0;
+                var valida = "no";
+                for (int i = 0; i < _post.Count(); i++)
+                {
+                    usuario = _post.ElementAt(i).ID_USUARIO;
+
+                    if (usuario == Convert.ToInt32(txtUsuario.Text))
+                    {
+                        valida = "si";
+                    }
+
+                }
+
+                if (valida == "si")
+                {
+                    await DisplayAlert("alerta", "El usuario ya posee una empresa", "OK");
+                }
+                else
+                {
+                    cliente.UploadValues("http://192.168.100.245/offerApp/postEmpresa.php", "POST", parametros);
+
+                    await DisplayAlert("alerta", "Empresa registrada", "ok");
+                }
+
+
                 
-
-                cliente.UploadValues("http://192.168.100.245/offerApp/postEmpresa.php", "POST", parametros);
-
-                await DisplayAlert("alerta", "Empresa registrada", "ok");
             }
             catch (Exception ex)
             {
