@@ -1,7 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,6 +16,7 @@ namespace OfferApp1
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ActualizarProductos : ContentPage
     {
+        
         public ActualizarProductos(int id, int em, string code, string nom, string pvp, string desc)
         {
             InitializeComponent();
@@ -36,10 +40,13 @@ namespace OfferApp1
                 WebClient cliente = new WebClient();
                 var parametros = new System.Collections.Specialized.NameValueCollection();
 
+               
                 cliente.UploadValues("http://192.168.100.245/offerApp/postProducto.php?ID_PRODUCTO=" + txtId.Text +
-                    "&ID_EMPRESA=" + txtEmpresa.Text + "&CODIGO=" + txtCodigo.Text + "&NOMBRE_PRODUCTO=" + txtNombre.Text + "&PVP=" + txtPrecio.Text + "&DESCRIPCION=" + txtDescripcion.Text , "PUT", parametros);
+                "&ID_EMPRESA=" + txtEmpresa.Text + "&CODIGO=" + txtCodigo.Text + "&NOMBRE_PRODUCTO=" + txtNombre.Text + "&PVP=" + txtPrecio.Text + "&DESCRIPCION=" + txtDescripcion.Text, "PUT", parametros);
 
-                await DisplayAlert("alerta", "Datos actualizados", "ok");
+                await DisplayAlert("alerta", "Datos actualizados", "ok");             
+
+                
             }
             catch (Exception ex)
             {
