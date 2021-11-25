@@ -17,7 +17,7 @@ namespace OfferApp1
     public partial class ActualizarProductos : ContentPage
     {
         
-        public ActualizarProductos(int id, int em, string code, string nom, string pvp, string desc)
+        public ActualizarProductos(int id, int em, string code, string nom, string pvp, string desc, string usu)
         {
             InitializeComponent();
             txtId.Text = id.ToString();
@@ -26,6 +26,7 @@ namespace OfferApp1
             txtNombre.Text = nom;
             txtPrecio.Text = pvp;
             txtDescripcion.Text = desc;
+            txtUsuario.Text = usu;
         }
 
         private void btnSeleccionarImagen_Clicked(object sender, EventArgs e)
@@ -57,7 +58,7 @@ namespace OfferApp1
 
         private async void btnSalir_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new DetalleProductos(Convert.ToInt32(txtEmpresa.Text)));
+            await Navigation.PushAsync(new DetalleProductos(Convert.ToInt32(txtEmpresa.Text), Convert.ToInt32(txtUsuario.Text)));
         }
     }
 }

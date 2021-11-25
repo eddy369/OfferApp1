@@ -11,40 +11,43 @@
             <Entry x:Name="txtUsuario" IsVisible="false"/>
             <Entry x:Name="txtLogueado" IsVisible="false"/>
             <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="60"/>
-                    <RowDefinition/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition Height="60"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="200"/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>                
+                <Image Source="wallpaper.jpg" Aspect="AspectFill" Opacity="1"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
 
-                <Label Text="NOMBRE" Grid.Row="0" Grid.Column="0" FontSize="22" BackgroundColor="Violet" TextColor="Black" Padding="10"/>
-                <Entry x:Name="txtNombre" Grid.Row="0" Grid.Column="1" FontSize="20" TextColor="Black" BackgroundColor="Beige"/>
+                    <Label Text="NOMBRE" Grid.Row="0" Grid.Column="0" FontSize="22" TextColor="Black"/>
+                    <Entry x:Name="txtNombre" Grid.Row="0" Grid.Column="1" FontSize="20" TextColor="Black" />
 
-                <Label Text="TELEFONO" Grid.Row="1" Grid.Column="0" FontSize="22" BackgroundColor="Violet" TextColor="Black" Padding="10"/>
-                <Entry x:Name="txtTelefono" Grid.Row="1" Grid.Column="1" FontSize="20" TextColor="Black" BackgroundColor="Beige"/>
+                    <Label Text="TELEFONO" Grid.Row="1" Grid.Column="0" FontSize="22" TextColor="Black" />
+                    <Entry x:Name="txtTelefono" Grid.Row="1" Grid.Column="1" FontSize="20" TextColor="Black" />
 
-                <Label Text="DIRECCION" Grid.Row="2" Grid.Column="0" FontSize="22" BackgroundColor="Violet" TextColor="Black" Padding="10"/>
-                <Editor x:Name="txtDireccion" Grid.Row="2" Grid.Column="1" FontSize="20" TextColor="Black" BackgroundColor="Beige"/>
+                    <Label Text="DIRECCION" Grid.Row="2" Grid.Column="0" FontSize="22" TextColor="Black" />
+                    <Editor x:Name="txtDireccion" Grid.Row="2" Grid.Column="1" FontSize="20" TextColor="Black" />
 
-                <Label Text="RAZON SOCIAL" Grid.Row="3" Grid.Column="0" FontSize="22" BackgroundColor="Violet" TextColor="Black" Padding="10"/>
-                <Entry x:Name="txtRazon" Grid.Row="3" Grid.Column="1" FontSize="20" TextColor="Black" BackgroundColor="Beige"/>
+                    <Label Text="RAZON SOCIAL" Grid.Row="3" Grid.Column="0" FontSize="22" TextColor="Black" />
+                    <Entry x:Name="txtRazon" Grid.Row="3" Grid.Column="1" FontSize="20" TextColor="Black" />
 
-                <Label Text="EMAIL" Grid.Row="4" Grid.Column="0" FontSize="22" BackgroundColor="Violet" TextColor="Black" Padding="10"/>
-                <Entry x:Name="txtEmail" Grid.Row="4" Grid.Column="1" FontSize="20" TextColor="Black" BackgroundColor="Beige"/>
+                    <Label Text="EMAIL" Grid.Row="4" Grid.Column="0" FontSize="22" TextColor="Black" />
+                    <Entry x:Name="txtEmail" Grid.Row="4" Grid.Column="1" FontSize="20" TextColor="Black" />
 
-                <Label Text="CIUDAD" Grid.Row="5" Grid.Column="0" FontSize="22" BackgroundColor="Violet" TextColor="Black" Padding="10"/>
-                <Entry x:Name="txtCiudad" Grid.Row="5" Grid.Column="1" FontSize="20" TextColor="Black" BackgroundColor="Beige"/>
+                    <Label Text="CIUDAD" Grid.Row="5" Grid.Column="0" FontSize="22" TextColor="Black" />
+                    <Entry x:Name="txtCiudad" Grid.Row="5" Grid.Column="1" FontSize="20" TextColor="Black" />
 
-                <Button x:Name="btningresar" Text="Actualizar" Clicked="btnactualizar_Clicked" Grid.Row="6" Grid.Column="0" BackgroundColor="#330099" TextColor="White" FontSize="20" BorderRadius="20"/>
-                <Button x:Name="btnregresar" Text="Salir" Clicked="btnregresar_Clicked" Grid.Row="6" Grid.Column="1" BackgroundColor="#330099" TextColor="White" FontSize="20" BorderRadius="25"/>
+                    <Button x:Name="btningresar" Text="Actualizar" Clicked="btnactualizar_Clicked" Grid.Row="6" Grid.Column="0" BackgroundColor="#FFC300" TextColor="Black" FontSize="20" BorderRadius="20"/>
+                    <Button x:Name="btnregresar" Text="Salir" Clicked="btnregresar_Clicked" Grid.Row="6" Grid.Column="1" BackgroundColor="#FFC300" TextColor="Black" FontSize="20" BorderRadius="25"/>
+                </Grid>
             </Grid>
         </StackLayout>
     </ContentPage.Content>

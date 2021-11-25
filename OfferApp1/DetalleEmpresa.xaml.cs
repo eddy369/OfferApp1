@@ -75,7 +75,8 @@ namespace OfferApp1
             {
                 DatosEmpresa c = MyListEmpresa.SelectedItem as DatosEmpresa;
                 int id = c.ID_EMPRESA;
-                await Navigation.PushAsync(new DetalleProductos(id));
+                int usu = c.ID_USUARIO;
+                await Navigation.PushAsync(new DetalleProductos(id,usu));
 
             }
             catch(Exception ex)
@@ -88,6 +89,11 @@ namespace OfferApp1
         private async void btnNuevo_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new viewEmpresa(Convert.ToInt32(txtLogueado.Text)));
+        }
+
+        private async void btnCerrar_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new viewLogin());
         }
     }
 }

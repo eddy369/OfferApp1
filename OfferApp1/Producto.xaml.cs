@@ -22,5 +22,10 @@ namespace OfferApp1
             lblDescrip.Text = desc;
             lblEmpresa.Text = n;
         }
+
+        private async void btnCerrar_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Catalogo(Convert.ToInt32(txtEmpresa.Text), lblNombre.Text));
+        }
     }
 }

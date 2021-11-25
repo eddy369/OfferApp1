@@ -9,37 +9,41 @@
             </Frame>
             <Entry x:Name="txtId" IsVisible="false" />
             <Entry x:Name="txtEmpresa" IsVisible="false"/>
+            <Entry x:Name="txtUsuario" IsVisible="false"/>
             <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="60"/>
-                    <RowDefinition/>
-                    <RowDefinition />
-                    <RowDefinition Height="auto" />
-                    <RowDefinition/>
-                    <RowDefinition Height="80"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="200"/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
+                <Image Source="wallpaper.jpg" Aspect="AspectFill" Opacity="1"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
 
-                <Label Text="CODIGO" Grid.Row="0" Grid.Column="0" FontSize="22" BackgroundColor="Violet" TextColor="Black" Padding="10"/>
-                <Entry x:Name="txtCodigo" Keyboard="Numeric" Grid.Row="0" Grid.Column="1" FontSize="20" TextColor="Black" BackgroundColor="Beige"/>
+                    <Label Text="CODIGO" Grid.Row="0" Grid.Column="0" FontSize="22" TextColor="Black" />
+                    <Entry x:Name="txtCodigo" IsReadOnly="True" Grid.Row="0" Grid.Column="1" FontSize="20" TextColor="Black" />
 
-                <Label Text="NOMBRE" Grid.Row="1" Grid.Column="0" FontSize="22" BackgroundColor="Violet" TextColor="Black" Padding="10"/>
-                <Entry x:Name="txtNombre" Grid.Row="1" Grid.Column="1" FontSize="20" TextColor="Black" BackgroundColor="Beige"/>
+                    <Label Text="NOMBRE" Grid.Row="1" Grid.Column="0" FontSize="22" TextColor="Black"/>
+                    <Entry x:Name="txtNombre" Grid.Row="1" Grid.Column="1" FontSize="20" TextColor="Black" />
 
-                <Label Text="PRECIO" Grid.Row="2" Grid.Column="0" FontSize="22" BackgroundColor="Violet" TextColor="Black" Padding="10"/>
-                <Entry x:Name="txtPrecio" Grid.Row="2" Grid.Column="1" FontSize="20" TextColor="Black" BackgroundColor="Beige"/>
+                    <Label Text="PRECIO" Grid.Row="2" Grid.Column="0" FontSize="22" TextColor="Black" />
+                    <Entry x:Name="txtPrecio" Grid.Row="2" Grid.Column="1" FontSize="20" TextColor="Black" />
 
-                <Label Text="DESCRIPCION" Grid.Row="3" Grid.Column="0" FontSize="22" BackgroundColor="Violet" TextColor="Black" Padding="10"/>
-                <Editor x:Name="txtDescripcion" Grid.Row="3" Grid.Column="1" TextColor="Black" BackgroundColor="Beige" FontSize="Large" VerticalOptions="CenterAndExpand" Margin="10, 0"/>
-                
-                <Label Text="IMAGEN" Grid.Row="4" Grid.Column="0" FontSize="22" BackgroundColor="Violet" TextColor="Black" Padding="10"/>
-                <Button x:Name="btnSeleccionarImagen" Text="Seleccionar Imagen" TextColor="Black" BackgroundColor="Violet" BorderRadius="20" BorderWidth="3" Grid.Row="4" Grid.Column="1" FontSize="20" Clicked="btnSeleccionarImagen_Clicked" Margin="60,0"/>
-                
-                <Button x:Name="btnActualizar" Text="Actualizar" Clicked="btnActualizar_Clicked" Grid.Row="5" Grid.Column="0" BackgroundColor="#330099" TextColor="White" FontSize="20" BorderRadius="20"/>
-                <Button x:Name="btnSalir" Text="Salir" Clicked="btnSalir_Clicked" Grid.Row="5" Grid.Column="1" BackgroundColor="#330099" TextColor="White" FontSize="20" BorderRadius="25"/>
+                    <Label Text="DESCRIPCION" Grid.Row="3" Grid.Column="0" FontSize="22" TextColor="Black"/>
+                    <Editor x:Name="txtDescripcion" Grid.Row="3" Grid.Column="1" TextColor="Black" FontSize="Large" VerticalOptions="CenterAndExpand" Margin="10, 0"/>
+
+                    <Label Text="IMAGEN" Grid.Row="4" Grid.Column="0" FontSize="22" TextColor="Black" />
+                    <Button x:Name="btnSeleccionarImagen" Text="Seleccionar Imagen" TextColor="White" BackgroundColor="#330099" BorderRadius="20" BorderWidth="3" Grid.Row="4" Grid.Column="1" FontSize="20" Clicked="btnSeleccionarImagen_Clicked" Margin="60,0"/>
+
+                    <Button x:Name="btnActualizar" Text="Actualizar" Clicked="btnActualizar_Clicked" Grid.Row="5" Grid.Column="0" BackgroundColor="#FFC300" TextColor="Black" FontSize="20" BorderRadius="20"/>
+                    <Button x:Name="btnSalir" Text="Salir" Clicked="btnSalir_Clicked" Grid.Row="5" Grid.Column="1" BackgroundColor="#FFC300" TextColor="Black" FontSize="20" BorderRadius="25"/>
+                </Grid>
             </Grid>
         </StackLayout>
     </ContentPage.Content>

@@ -80,6 +80,25 @@ namespace OfferApp1
                 
         private async void btnSeleccionarLogo_Clicked(object sender, EventArgs e)
         {
+            if (!CrossMedia.Current.IsPickPhotoSupported)
+            {
+                await DisplayAlert("Photos not Supported", ":( Permission not granted to photos.", "ok");
+                return;
+            }
+            var file = await Plugin.Media.CrossMedia.Current.PickPhotoAsync(new Plugin.Media.Abstractions.PickMediaOptions
+            { 
+                PhotoSize = Plugin.Media.Abstractions.PhotoSize.Medium,
+            });
+
+            if (file == null)
+                return;
+
+            Imagen.Source = ImageSource.FromStream(() =>
+            {
+                var stream = file.GetStream();
+                file.Dispose();
+                return stream;
+            });
             
         }
 

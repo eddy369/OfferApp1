@@ -7,16 +7,17 @@
         <Frame BackgroundColor="#35158B" Padding="20" CornerRadius="0">
             <Label Text="Catálogo Empresas" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"/>
         </Frame>
+        <Button x:Name="btnCerrar" Text="Cerrar Sesión" Clicked="btnCerrar_Clicked"  BackgroundColor="Transparent" TextColor="#000" FontSize="16" HorizontalOptions="End"/>
         <Grid Margin="0,20,0,0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
+                <RowDefinition Height="80"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
-                <ColumnDefinition Width="400"/>
+                <ColumnDefinition Width="230"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="btnVer" Text="Ver catálogo de productos" Grid.Column="2" Clicked="btnVer_Clicked" BackgroundColor="GreenYellow" FontSize="20" BorderRadius="20" BorderColor="#35158B" BorderWidth="2"/>
+            <Button x:Name="btnVer" Text="Ver Catálogo" Grid.Column="2" Clicked="btnVer_Clicked" BackgroundColor="#FFC300" FontSize="20" BorderRadius="20" TextColor="Black" Margin="10"/>
             
         </Grid>
         <Grid>
@@ -44,8 +45,8 @@
                                         <ColumnDefinition/>
                                     </Grid.ColumnDefinitions>
                                     <Image Source="wallpaper.jpg" Grid.Column="0" Aspect="AspectFill"/>
-                                    <Label x:Name="lblCodigo" Text="{Binding NOMBRE}" Grid.Column="1"/>
-                                    <Label x:Name="lblCiudad" Text="{Binding CIUDAD}" Grid.Column="2"/>
+                                    <Label x:Name="lblCodigo" Text="{Binding NOMBRE}" Grid.Column="1" TextColor="Black" FontSize="20"/>
+                                <Label x:Name="lblCiudad" Text="{Binding CIUDAD}" Grid.Column="2" TextColor="Black" FontSize="20"/>
                                 </Grid>
                             </StackLayout>
                         </ViewCell>

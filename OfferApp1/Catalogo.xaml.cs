@@ -65,5 +65,10 @@ namespace OfferApp1
 
 
         }
+
+        private async void btnCerrar_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new viewCatalogo(1));
+        }
     }
 }

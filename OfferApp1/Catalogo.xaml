@@ -7,32 +7,33 @@
             <Frame BackgroundColor="#330099" Padding="0" CornerRadius="0">
                 <Label Text="Productos Disponibles" HorizontalTextAlignment="Center" TextColor="White" FontSize="28" Padding="15"/>
             </Frame>
+            <Button x:Name="btnCerrar" Text="Regresar" Clicked="btnCerrar_Clicked"  BackgroundColor="Transparent" TextColor="#000" FontSize="16" HorizontalOptions="End"/>
             <Entry x:Name="txtEmpresa" IsVisible="false"/>
             <Entry x:Name="txtName" IsVisible="false"/>
             <Grid Margin="0,20,0,0">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="80"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
-                    <ColumnDefinition Width="300"/>
+                    <ColumnDefinition Width="230"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="btnDetalle" Text="Ver detalle de producto" Grid.Column="2" Clicked="btnDetalle_Clicked" BackgroundColor="GreenYellow" FontSize="20" BorderRadius="20" BorderColor="#35158B" BorderWidth="2"/>
+                <Button x:Name="btnDetalle" Text="Ver detalle de producto" Grid.Column="2" Clicked="btnDetalle_Clicked" BackgroundColor="#FFC300" TextColor="Black" FontSize="20" BorderRadius="20" Margin="10"/>
                 
             </Grid>
-            <Grid BackgroundColor="#35158B">
+            <Grid Margin="10">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="60"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Label Text="IMAGEN"  Grid.Column="0" HorizontalTextAlignment="Center" TextColor="White" FontSize="22" VerticalTextAlignment="Center"/>                
-                <Label Text="NOMBRE" Grid.Column="1" HorizontalTextAlignment="Center" TextColor="White" FontSize="22" VerticalTextAlignment="Center"/>
-                <Label Text="PRECIO" Grid.Column="2" HorizontalTextAlignment="Center" TextColor="White" FontSize="22" VerticalTextAlignment="Center"/>
+                <Label Text="IMAGEN"  Grid.Column="0" HorizontalTextAlignment="Center" TextColor="Black" FontSize="22" VerticalTextAlignment="Center"/>                
+                <Label Text="NOMBRE" Grid.Column="1" HorizontalTextAlignment="Center" TextColor="Black" FontSize="22" VerticalTextAlignment="Center"/>
+                <Label Text="PRECIO" Grid.Column="2" HorizontalTextAlignment="Center" TextColor="Black" FontSize="22" VerticalTextAlignment="Center"/>
             </Grid>
             <ListView x:Name="MyListProductos" SelectedItem="{Binding ID_PRODUCTO}" SeparatorColor="#330099">
                 <ListView.ItemTemplate>

@@ -11,19 +11,21 @@
                 <Image Source="wallpaper.jpg" Aspect="AspectFill" Opacity="1"/>
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="0"/>
-                        <RowDefinition Height="60"/>
-                        <RowDefinition Height="60"/>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="60"/>
-                        <RowDefinition Height="60"/>
-                        <RowDefinition Height="60"/>
-                        <RowDefinition Height="60"/>
-                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition/>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
                     </Grid.RowDefinitions>
 
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition />
                         <ColumnDefinition/> 
                     </Grid.ColumnDefinitions>
 
@@ -42,12 +44,13 @@
                     <Entry x:Name="txtNombreComercial" Keyboard="Text" TextColor="Black" Grid.Row="5" Grid.Column="1" FontSize="24"/>
                     <Label Text="Correo" TextColor="Black" Grid.Row="6" Grid.Column="0" FontSize="24"/>
                     <Entry x:Name="txtCorreo" Keyboard="Text" TextColor="Black" Grid.Row="6" Grid.Column="1" FontSize="24"/>
-                    <Label Text="Logo" Grid.Row="7" Grid.Column="0" FontSize="24" TextColor="Black"/>
-                    <Button x:Name="btnSeleccionarLogo" Text="Seleccionar Imagen" TextColor="Black" BackgroundColor="Violet" BorderRadius="20" BorderWidth="3" Grid.Row="7" Grid.Column="1" FontSize="20" Clicked="btnSeleccionarLogo_Clicked" Margin="60,0"/>
-                    
+                    <Image x:Name="Imagen" Grid.Row="7" Grid.ColumnSpan="2"/>
+                    <Label x:Name="Logo" Text="Logo" Grid.Row="9" Grid.Column="0" FontSize="24" TextColor="Black"/>
+                    <Button x:Name="btnSeleccionarLogo" Text="Seleccionar Imagen" TextColor="White" BackgroundColor="#024A86" BorderRadius="20" BorderWidth="3" Grid.Row="9" Grid.Column="1" FontSize="20" Clicked="btnSeleccionarLogo_Clicked" />
 
-                     <Button x:Name="btnGuardar" Text="GUARDAR" TextColor="White" BackgroundColor="#35158B" BorderWidth="3" Grid.Row="8" Grid.Column="0" BorderRadius="30"  FontSize="26" Clicked="btnGuardar_Clicked"/>
-                    <Button x:Name="btnSalir" Text="Salir" TextColor="White" BackgroundColor="#35158B" BorderWidth="3" Grid.Row="8" Grid.Column="1" BorderRadius="30"  FontSize="26" Clicked="btnSalir_Clicked"/>
+
+                    <Button x:Name="btnGuardar" Text="GUARDAR" TextColor="Black" BackgroundColor="#FFC300" BorderWidth="3" Grid.Row="10" Grid.Column="0" BorderRadius="30"  FontSize="26" Clicked="btnGuardar_Clicked"/>
+                    <Button x:Name="btnSalir" Text="Salir" TextColor="Black" BackgroundColor="#FFC300" BorderWidth="3" Grid.Row="10" Grid.Column="1" BorderRadius="30"  FontSize="26" Clicked="btnSalir_Clicked"/>
                 </Grid>
             </Grid>
         </StackLayout>

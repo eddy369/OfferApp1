@@ -7,6 +7,7 @@
             <Frame BackgroundColor="#330099" Padding="0" CornerRadius="0">
                 <Label Text="Detalle Producto" HorizontalTextAlignment="Center" TextColor="White" FontSize="28" Padding="15"/>
             </Frame>
+            <Button x:Name="btnCerrar" Text="Regresar" Clicked="btnCerrar_Clicked"  BackgroundColor="Transparent" TextColor="#000" FontSize="16" HorizontalOptions="End"/>
             <Entry x:Name="txtId" IsVisible="false" />
             <Entry x:Name="txtEmpresa" IsVisible="false"/>
             <Grid>

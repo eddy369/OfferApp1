@@ -8,18 +8,20 @@
                 <Label Text="Detalle Productos" HorizontalTextAlignment="Center" TextColor="White" FontSize="28" Padding="15"/>
             </Frame>
             <Entry x:Name="txtEmpresa" IsVisible="false"/>
+            <Entry x:Name="txtUsuario" IsVisible="false"/>
+            <Button x:Name="btnEmpresa" Text="Regresar" Clicked="btnEmpresa_Clicked" BackgroundColor="Transparent" TextColor="#000" FontSize="16" HorizontalOptions="End"/>
             <Grid Margin="0,20,0,0">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="btnNuevo" Text="Nuevo" Clicked="btnNuevo_Clicked" BackgroundColor="GreenYellow" FontSize="20" BorderRadius="20" BorderColor="#35158B" BorderWidth="2"/>
-                <Button x:Name="btnActualizar" Text="Actualizar" Clicked="btnActualizar_Clicked" Grid.Column="1" BackgroundColor="GreenYellow" BorderColor="#35158B" BorderRadius="20" TextColor="#35158B" BorderWidth="2" FontSize="20"/>
-                <Button x:Name="btnEliminar" Text="Eliminar" Clicked="btnEliminar_Clicked" Grid.Column="2" BackgroundColor="GreenYellow" BorderColor="#35158B" BorderRadius="20" TextColor="#35158B" BorderWidth="2" FontSize="20"/>
+                <Button x:Name="btnNuevo" Text="Nuevo" Clicked="btnNuevo_Clicked" BackgroundColor="#FFC300" BorderRadius="20" TextColor="Black" BorderWidth="2" FontSize="20" Margin="10"/>
+                <Button x:Name="btnActualizar" Text="Actualizar" Clicked="btnActualizar_Clicked" Grid.Column="1" BackgroundColor="#FFC300" BorderRadius="20" TextColor="Black" BorderWidth="2" FontSize="20" Margin="10"/>
+                <Button x:Name="btnEliminar" Text="Eliminar" Clicked="btnEliminar_Clicked" Grid.Column="2" BackgroundColor="#FFC300" BorderRadius="20" TextColor="Black" BorderWidth="2" FontSize="20" Margin="10"/>
 
             </Grid>
             <Grid BackgroundColor="#35158B">

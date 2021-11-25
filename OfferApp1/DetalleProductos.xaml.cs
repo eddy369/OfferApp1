@@ -19,11 +19,12 @@ namespace OfferApp1
         private const string Url = "http://192.168.100.245/offerApp/postProducto.php";
         private readonly HttpClient client = new HttpClient();
         private ObservableCollection<OfferApp1.DatosProducto> _post;
-        public DetalleProductos(int id)
+        public DetalleProductos(int id, int usu)
         {
             InitializeComponent();
             get(id);
             txtEmpresa.Text = id.ToString();
+            txtUsuario.Text = usu.ToString();
         }
 
         private async void get(int id)
@@ -44,9 +45,9 @@ namespace OfferApp1
 
         }
 
-        private void btnNuevo_Clicked(object sender, EventArgs e)
+        private async void btnNuevo_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new viewCargarArchivo());
         }
 
         private async void btnActualizar_Clicked(object sender, EventArgs e)
@@ -60,7 +61,8 @@ namespace OfferApp1
                 string nombre = c.NOMBRE_PRODUCTO;
                 string precio = c.PVP;
                 string descripcion = c.DESCRIPCION;
-                await Navigation.PushAsync(new ActualizarProductos(id, empresa, codigo, nombre, precio, descripcion));
+                string usu = txtUsuario.Text;
+                await Navigation.PushAsync(new ActualizarProductos(id, empresa, codigo, nombre, precio, descripcion,usu));
             }
             catch (Exception ex)
             {
@@ -86,6 +88,11 @@ namespace OfferApp1
             {
                 DisplayAlert("alerta", ex.Message, "ok");
             }
+        }
+
+        private async void btnEmpresa_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DetalleEmpresa(Convert.ToInt32(txtUsuario.Text)));
         }
     }
 }
