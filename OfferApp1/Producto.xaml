@@ -18,13 +18,25 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Image Source="wallpaper.jpg" Grid.Row="0" Aspect="AspectFill" HeightRequest="400"/>
+                <Image Source="wallpaper.jpg" Grid.Row="0" Aspect="AspectFill" HeightRequest="300"/>
                 <StackLayout Grid.Row="1" Padding="20,20" HorizontalOptions="Center">
                     <Label x:Name="lblEmpresa" TextColor="#000" FontSize="26"/>
                     <Label x:Name="lblNombre" TextColor="#000" FontSize="26"/>
                     <Label x:Name="lblPVP" TextColor="#000" FontSize="26"/>
                     <Label x:Name="lblDescrip" VerticalOptions="CenterAndExpand" Margin="10, 0" TextColor="#000" FontSize="20"/>                    
-                </StackLayout>
+                </StackLayout>                
+            </Grid>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnFacebook" Text="Compartir en Facebook" BackgroundColor="Blue" BorderRadius="30" TextColor="White" FontSize="20" Clicked="btnFacebook_Clicked" Grid.Column="0" ClassId="http://www.facebook.com/sharer.php?u=http://192.168.100.245/offerApp/postProducto.php?ID_EMPRESA="/>
+                <Button x:Name="btnWhatsapp" Text="Contactarse" BackgroundColor="LightGreen" BorderRadius="30" Clicked="btnWhatsapp_Clicked" FontSize="20" Grid.Column="1" ClassId="https://api.whatsapp.com/send?phone=593979122668"/>
+                
             </Grid>
         </StackLayout>
     </ContentPage.Content>

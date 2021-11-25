@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -26,6 +26,23 @@ namespace OfferApp1
         private async void btnCerrar_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new Catalogo(Convert.ToInt32(txtEmpresa.Text), lblNombre.Text));
+        }        
+
+        private async void btnFacebook_Clicked(object sender, EventArgs e)
+        {
+            var button = (Button)sender;
+            var url = button.ClassId;
+
+            await Browser.OpenAsync(url + txtEmpresa.Text);
+           
+        }
+
+        private async void btnWhatsapp_Clicked(object sender, EventArgs e)
+        {
+            var button = (Button)sender;
+            var url = button.ClassId;
+
+            await Browser.OpenAsync(url);
         }
     }
 }
