@@ -145,4 +145,49 @@
   <ItemGroup>
     <BundleResource Include="Resources\wallpaper.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\prueba.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\empresa1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\empresa2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\empresa3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\empresa4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\empresa5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\empresa6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\empresa7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\paty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\belen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\tenis.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\fitness.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\belen.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\casual.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\prueba2.jpg" />
+  </ItemGroup>
 </Project>

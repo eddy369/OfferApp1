@@ -44,7 +44,7 @@
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition/>
                                     </Grid.ColumnDefinitions>
-                                    <Image Source="wallpaper.jpg" Grid.Column="0" Aspect="AspectFill"/>
+                                    <Image Source="{Binding LOGO}" Grid.Column="0" Aspect="AspectFill"/>
                                     <Label x:Name="lblCodigo" Text="{Binding NOMBRE}" Grid.Column="1" TextColor="Black" FontSize="20"/>
                                 <Label x:Name="lblCiudad" Text="{Binding CIUDAD}" Grid.Column="2" TextColor="Black" FontSize="20"/>
                                 </Grid>

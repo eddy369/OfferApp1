@@ -40,6 +40,7 @@ namespace OfferApp1
                 parametros.Add("TELEFONO", txtTelefono.Text);
                 parametros.Add("CIUDAD", txtCiudad.Text);
                 parametros.Add("EMAIL_EMPRESA", txtCorreo.Text);
+                parametros.Add("LOGO", "prueba.jpg");
 
                 var content = await client.GetStringAsync("http://192.168.100.245/offerApp/postEmpresa.php?ID_USUARIO="+txtUsuario.Text);
                 List<OfferApp1.DatosEmpresa> post = JsonConvert.DeserializeObject<List<OfferApp1.DatosEmpresa>>(content);

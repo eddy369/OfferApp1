@@ -54,7 +54,7 @@
                                             <ColumnDefinition/>
                                             <ColumnDefinition/>
                                         </Grid.ColumnDefinitions>
-                                        <Image Source="wallpaper.jpg" Grid.Column="0" Aspect="AspectFill"/>
+                                        <Image Source="{Binding IMAGEN}" Grid.Column="0" Aspect="AspectFill"/>
                                         <Label x:Name="lblCodigo" Text="{Binding CODIGO}" Grid.Column="1" TextColor="Black" FontSize="18" HorizontalTextAlignment="Center"/>
                                         <Label x:Name="lblNombre" Text="{Binding NOMBRE_PRODUCTO}" Grid.Column="2" TextColor="Black" FontSize="18"/>
                                         <Label x:Name="lblPrecio" Text="{Binding PVP}" Grid.Column="3" TextColor="Black" FontSize="18" HorizontalTextAlignment="Center"/>

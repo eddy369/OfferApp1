@@ -12,7 +12,7 @@ namespace OfferApp1
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Producto : ContentPage
     {
-        public Producto(int id, int em, string code, string nom, string pvp, string desc, string n)
+        public Producto(int id, int em, string code, string nom, string pvp, string desc, string n, string img)
         {
             InitializeComponent();
             txtId.Text = id.ToString();
@@ -21,6 +21,7 @@ namespace OfferApp1
             lblPVP.Text = pvp;
             lblDescrip.Text = desc;
             lblEmpresa.Text = n;
+            imagen.Source = img;
         }
 
         private async void btnCerrar_Clicked(object sender, EventArgs e)

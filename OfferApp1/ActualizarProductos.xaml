@@ -37,12 +37,9 @@
 
                     <Label Text="DESCRIPCION" Grid.Row="3" Grid.Column="0" FontSize="22" TextColor="Black"/>
                     <Editor x:Name="txtDescripcion" Grid.Row="3" Grid.Column="1" TextColor="Black" FontSize="Large" VerticalOptions="CenterAndExpand" Margin="10, 0"/>
-
-                    <Label Text="IMAGEN" Grid.Row="4" Grid.Column="0" FontSize="22" TextColor="Black" />
-                    <Button x:Name="btnSeleccionarImagen" Text="Seleccionar Imagen" TextColor="White" BackgroundColor="#330099" BorderRadius="20" BorderWidth="3" Grid.Row="4" Grid.Column="1" FontSize="20" Clicked="btnSeleccionarImagen_Clicked" Margin="60,0"/>
-
-                    <Button x:Name="btnActualizar" Text="Actualizar" Clicked="btnActualizar_Clicked" Grid.Row="5" Grid.Column="0" BackgroundColor="#FFC300" TextColor="Black" FontSize="20" BorderRadius="20"/>
-                    <Button x:Name="btnSalir" Text="Salir" Clicked="btnSalir_Clicked" Grid.Row="5" Grid.Column="1" BackgroundColor="#FFC300" TextColor="Black" FontSize="20" BorderRadius="25"/>
+                    
+                    <Button x:Name="btnActualizar" Text="Actualizar" Clicked="btnActualizar_Clicked" Grid.Row="4" Grid.Column="0" BackgroundColor="#FFC300" TextColor="Black" FontSize="20" BorderRadius="20"/>
+                    <Button x:Name="btnSalir" Text="Salir" Clicked="btnSalir_Clicked" Grid.Row="4" Grid.Column="1" BackgroundColor="#FFC300" TextColor="Black" FontSize="20" BorderRadius="25"/>
                 </Grid>
             </Grid>
         </StackLayout>

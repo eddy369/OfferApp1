@@ -16,9 +16,11 @@ namespace OfferApp1
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class viewCargarArchivo : ContentPage
     {
-        public viewCargarArchivo()
+        public viewCargarArchivo(string emp, string usu)
         {
             InitializeComponent();
+            txtIdEmpresa.Text = emp;
+            txtUsuario.Text = usu;
         }
 
         private async void btnTomarFoto_Clicked(object sender, EventArgs e)
@@ -93,9 +95,10 @@ namespace OfferApp1
                 parametros.Add("PVP", txtPrecio.Text);
                 parametros.Add("CODIGO", txtCodigo.Text);
                 //parametros.Add(new StreamContent(Imagen.GetStream()), "IMAGEN");
-                //parametros.Add("IMAGEN", Image.);
+                parametros.Add("IMAGEN", "prueba2.jpg");
+                parametros.Add("DESCRIPCION", txtDetalle.Text);
 
-                cliente.UploadValues("http://192.168.0.10/offerapp/postProducto.php?", "POST", parametros);
+                cliente.UploadValues("http://192.168.100.245/offerApp/postProducto.php?ID_EMPRESA=" + txtIdEmpresa.Text, "POST", parametros);
 
                 await DisplayAlert("Notificación", "Producto ingresado correctamente...", "OK");
             }
@@ -113,6 +116,11 @@ namespace OfferApp1
         private void btnEliminar_Clicked(object sender, EventArgs e)
         {
 
+        }
+
+        private async void btnSalir_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DetalleProductos(Convert.ToInt32(txtIdEmpresa.Text), Convert.ToInt32(txtUsuario.Text)));
         }
     }
 }

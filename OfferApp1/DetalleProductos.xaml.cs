@@ -47,7 +47,9 @@ namespace OfferApp1
 
         private async void btnNuevo_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new viewCargarArchivo());
+            var empresa = txtEmpresa.Text;
+            var usuario = txtUsuario.Text;
+            await Navigation.PushAsync(new viewCargarArchivo(empresa,usuario));
         }
 
         private async void btnActualizar_Clicked(object sender, EventArgs e)

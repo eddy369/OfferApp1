@@ -56,7 +56,8 @@ namespace OfferApp1
                 string precio = c.PVP;
                 string descripcion = c.DESCRIPCION;
                 string name = txtName.Text;
-                await Navigation.PushAsync(new Producto(id, empresa, codigo, nombre, precio, descripcion,name));
+                string imagen = c.IMAGEN;
+                await Navigation.PushAsync(new Producto(id, empresa, codigo, nombre, precio, descripcion,name,imagen));
             }
             catch (Exception ex)
             {

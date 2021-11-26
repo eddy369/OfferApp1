@@ -18,7 +18,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Image Source="wallpaper.jpg" Grid.Row="0" Aspect="AspectFill" HeightRequest="300"/>
+                <Image x:Name="imagen" Grid.Row="0" Aspect="AspectFill" HeightRequest="300"/>
                 <StackLayout Grid.Row="1" Padding="20,20" HorizontalOptions="Center">
                     <Label x:Name="lblEmpresa" TextColor="#000" FontSize="26"/>
                     <Label x:Name="lblNombre" TextColor="#000" FontSize="26"/>
