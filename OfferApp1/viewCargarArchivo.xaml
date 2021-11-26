@@ -45,7 +45,7 @@
                     <Button x:Name="btnSeleccionarFoto" Text="Seleccionar Imagen" TextColor="Black" BackgroundColor="#2789BD" BorderColor="Yellow" BorderWidth="3" Grid.Row="6" Grid.Column="1" FontSize="26" Clicked="btnSeleccionarFoto_Clicked"/>
                    
                     <Button x:Name="btnAgregar" Text="AGREGAR" TextColor="Black" BackgroundColor="#2789BD" BorderColor="Yellow" BorderWidth="3" Grid.Row="7" Grid.Column="0" FontSize="26" Clicked="btnAgregar_Clicked"/>
-                    <Button x:Name="btnSalir" Text="EDITAR" TextColor="Black" BackgroundColor="#2789BD" BorderColor="Yellow" BorderWidth="3" Grid.Row="7" Grid.Column="1" FontSize="26" Clicked="btnSalir_Clicked"/>
+                    <Button x:Name="btnSalir" Text="SALIR" TextColor="Black" BackgroundColor="#2789BD" BorderColor="Yellow" BorderWidth="3" Grid.Row="7" Grid.Column="1" FontSize="26" Clicked="btnSalir_Clicked"/>
                     
                     
                 </Grid>
