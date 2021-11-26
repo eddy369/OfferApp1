@@ -65,7 +65,7 @@ namespace OfferApp1
                 }
                 else
                 {
-                    cliente.UploadValues("http://192.168.100.245/offerApp/postEmpresa.php", "POST", parametros);
+                    cliente.UploadValues("http://192.168.100.245/offerApp/postEmpresa.php?ID_USUARIO="+txtUsuario.Text, "POST", parametros);
 
                     await DisplayAlert("alerta", "Empresa registrada", "ok");
                 }
