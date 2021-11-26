@@ -46,7 +46,7 @@
                     </StackLayout>
                     <StackLayout Grid.Row="6" Grid.Column="1" Margin="10,20">
                         <Button x:Name="btnSalir" Text="Salir" Clicked="btnSalir_Clicked" BackgroundColor="#E64AFF" BorderRadius="20" TextColor="#35158B" BorderWidth="3" FontSize="26"/>
-                    </StackLayout>
+                    </StackLayout> 
 
                 </Grid>
             </Grid>
